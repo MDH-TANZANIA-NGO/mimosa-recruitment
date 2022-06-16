@@ -25,6 +25,7 @@ class CreateRegionsTable extends Migration
             $table->smallInteger('isactive')->default(1);
             $table->integer('zone_id')->nullable();
             $table->boolean('exceptional')->default(false);
+            $table->boolean('is_city')->default(false);
         });
         $this->comment("regions", "regions in tanzania");
     }

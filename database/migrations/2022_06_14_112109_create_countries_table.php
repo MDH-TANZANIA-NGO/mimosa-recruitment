@@ -17,11 +17,9 @@ class CreateCountriesTable extends Migration
     {
         Schema::create('countries', function(Blueprint $table)
         {
-            $table->smallInteger('id', true);
-            $table->string('name', 191);
-            $table->dateTime('created_at')->nullable()->useCurrent();
-            $table->string('code', 2);
-            $table->uuid('uuid');
+            $table->increments('id');
+            $table->string('code', 2)->index();
+            $table->string('name', 75);
         });
         $this->comment("countries", "list of all countries in the world");
     }

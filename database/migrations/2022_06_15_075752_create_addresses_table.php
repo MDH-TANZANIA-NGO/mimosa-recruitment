@@ -13,7 +13,7 @@ class CreateAddressesTable extends Migration
      */
     public function up()
     {
-        Schema::table('addresses', function (Blueprint $table) {
+        Schema::create('addresses', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid');
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
@@ -21,7 +21,6 @@ class CreateAddressesTable extends Migration
             $table->foreignId('region_id')->constrained('regions')->onDelete('cascade');
             $table->string('area_name');
             $table->string('house_number');
-            $table->uuid('uuid');
             $table->smallInteger('address_type_cv_id');
             $table->softDeletes();
             $table->timestamps();
