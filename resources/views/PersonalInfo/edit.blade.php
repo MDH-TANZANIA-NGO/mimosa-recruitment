@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form action="" method="post">
+<form action="{{ route('personal.update',$personal->id) }}" method="post">
 
     @csrf
 
@@ -33,8 +33,8 @@
                             <div class="col-sm-6 col-md-4">
                                 <div class="form-group">
                                     <label class="form-label">Title</label>
-                                    <input type="text" class="form-control" name="name">
-                                    <div class="alert-danger">{{$errors->first('name')}} </div>
+                                    <input type="text" class="form-control" name="title" value="{{$personal->title}}">
+                                    <div class="alert-danger">{{$errors->first('title')}} </div>
 
                                 </div>
                             </div>
@@ -42,33 +42,33 @@
                             <div class="col-sm-6 col-md-4">
                                 <div class="form-group">
                                     <label class="form-label">First Name</label>
-                                    <input type="text" class="form-control" name="name">
-                                    <div class="alert-danger">{{$errors->first('name')}} </div>
+                                    <input type="text" class="form-control" name="first_name" value="{{$personal->first_name}}">
+                                    <div class="alert-danger">{{$errors->first('first_name')}} </div>
 
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="form-group">
                                     <label class="form-label">Surname</label>
-                                    <input type="email" class="form-control" name="email">
-                                    <div class="alert-danger">{{$errors->first('email')}} </div>
+                                    <input type="text" class="form-control" name="sur_name" value="{{$personal->sur_name}}">
+                                    <div class="alert-danger">{{$errors->first('sur_name')}} </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="form-group">
                                     <label class="form-label">Middle Name</label>
-                                    <input type="text" class="form-control" name="name">
-                                    <div class="alert-danger">{{$errors->first('name')}} </div>
+                                    <input type="text" class="form-control" name="middle_name" value="{{$personal->middle_name}}">
+                                    <div class="alert-danger">{{$errors->first('middle_name')}} </div>
 
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="form-group">
                                     <label class="form-label">Gender</label>
-                                    <select class="form-control custom-select select2" name="district_name">
+                                    <select class="form-control custom-select select2" name="gender">
                                         <option value="Select">--Select--</option>
-                                        <option value="Select">Male</option>
-                                        <option value="Select">Female</option>
+                                        <option value="Male" {{$personal -> gender=="Male" ? 'selected':''}}>Male</option>
+                                        <option value="Female" {{$personal ->gender =="Female" ? 'selected':''}}>Female</option>
 
                                     </select>
                                     <div class="alert-danger">{{$errors->first('gender')}} </div>
@@ -78,39 +78,33 @@
                             <div class="col-sm-6 col-md-4">
                                 <div class="form-group">
                                     <label class="form-label">Date of Birth</label>
-                                    <input type="date" class="form-control" name="date">
-                                    <div class="alert-danger">{{$errors->first('date')}} </div>
+                                    <input type="date" class="form-control" name="dob" value="{{$personal->dob}}">
+                                    <div class="alert-danger">{{$errors->first('dob')}} </div>
                                 </div>
                             </div>
 
                             <div class="col-sm-6 col-md-4">
                                 <div class="form-group">
                                     <label class="form-label">Mobile Number</label>
-                                    <input type="number" class="form-control" name="gender">
-                                    <div class="alert-danger">{{$errors->first('gender')}} </div>
+                                    <input type="number" class="form-control" name="mobile_number" value="{{$personal->mobile_number}}">
+                                    <div class="alert-danger">{{$errors->first('mobile_number')}} </div>
                                 </div>
                             </div>
 
                             <div class="col-sm-6 col-md-4">
                                 <div class="form-group">
                                     <label class="form-label">Alternative Number</label>
-                                    <input type="number" class="form-control" name="gender">
-                                    <div class="alert-danger">{{$errors->first('gender')}} </div>
+                                    <input type="number" class="form-control" name="alternative_number" value="{{$personal->alternative_number}}">
+                                    <div class="alert-danger">{{$errors->first('alternative_number')}} </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="form-group">
                                     <label class="form-label">Nationality</label>
-                                    <input type="text" class="form-control" name="nationality">
+                                    <input type="text" class="form-control" name="nationality" value="{{$personal->nationality}}">
                                     <div class="alert-danger">{{$errors->first('nationality')}} </div>
                                 </div>
                             </div>
-
-
-
-
-
-
 
                         </div>
                     </div>

@@ -7,7 +7,7 @@
         </li>
 
         <li>
-            <a class="side-menu__item" href="{{ url('/personalinfo') }}"><i class="side-menu__icon fa fa-briefcase"></i><span class="side-menu__label">Personal Information</span></a>
+            <a class="side-menu__item" href="{{ url('/personal') }}"><i class="side-menu__icon fa fa-briefcase"></i><span class="side-menu__label">Personal Information</span></a>
         </li>
 
         <li>
