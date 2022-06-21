@@ -21,7 +21,7 @@ trait Number
         switch ($model->getTable())
         {
             case 'requisitions':
-                #generate Reference number
+                #generate reference number
                 $reference = "REQNUM";
                 $year = $this->year();
                 $value = $this->getSysDefCurrentValue($reference);
@@ -43,7 +43,7 @@ trait Number
                 return $this->getSpecific($model, $reference, $value, $number);
                 break;
             case 'program_activities':
-                #generate Reference number
+                #generate reference number
                 $reference = "PROGRAMACTIVITYNUM";
                 $year = $this->year();
                 $value = $this->getSysDefCurrentValue($reference);
@@ -51,7 +51,7 @@ trait Number
                 return $this->getSpecific($model, $reference, $value, $number);
                 break;
             case 'payments':
-                #generate Reference number
+                #generate reference number
                 $reference = "PAYMENTNUM";
                 $year = $this->year();
                 $value = $this->getSysDefCurrentValue($reference);
@@ -60,7 +60,7 @@ trait Number
                 break;
 
             case 'program_activity_reports':
-                #generate Reference number
+                #generate reference number
                 $reference = "PROGRAMCTIVITYREPORTNUM";
                 $year = $this->year();
                 $value = $this->getSysDefCurrentValue($reference);
@@ -68,7 +68,7 @@ trait Number
                 return $this->getSpecific($model, $reference, $value, $number);
                 break;
             case 'rates':
-                #generate Reference number
+                #generate reference number
                 $reference = "RATENUM";
                 $year = $this->year();
                 $value = $this->getSysDefCurrentValue($reference);
@@ -76,7 +76,7 @@ trait Number
                 return $this->getSpecific($model, $reference, $value, $number);
                 break;
             case 'g_officers':
-                #generate Reference number
+                #generate reference number
                 $reference = "CHECKNO";
                 $year = $this->year();
                 $month = $this->month();

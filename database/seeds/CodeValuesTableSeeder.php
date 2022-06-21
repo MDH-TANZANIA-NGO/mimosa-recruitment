@@ -273,6 +273,105 @@ class CodeValuesTableSeeder extends Seeder
                     'sort' => 0,
                     'isactive' => 1,
                 ),
+            23 =>
+                array (
+                    'id' => 24,
+                    'code_id' => 6,
+                    'name' => 'English',
+                    'lang' => NULL,
+                    'description' => 'English Language',
+                    'reference' => 'eng-lang',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            24 =>
+                array (
+                    'id' => 25,
+                    'code_id' => 6,
+                    'name' => 'Swahili',
+                    'lang' => NULL,
+                    'description' => 'Swahili Language',
+                    'reference' => 'swa-lang',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            25 =>
+                array (
+                    'id' => 26,
+                    'code_id' => 6,
+                    'name' => 'French',
+                    'lang' => NULL,
+                    'description' => 'French Language',
+                    'reference' => 'fre-lang',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            26 =>
+                array (
+                    'id' => 27,
+                    'code_id' => 6,
+                    'name' => 'Chinese',
+                    'lang' => NULL,
+                    'description' => 'Chinese Language',
+                    'reference' => 'chi-lang',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            27 =>
+                array (
+                    'id' => 28,
+                    'code_id' => 6,
+                    'name' => 'Russian',
+                    'lang' => NULL,
+                    'description' => 'Russian Language',
+                    'reference' => 'rus-lang',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            28 =>
+                array (
+                    'id' => 29,
+                    'code_id' => 6,
+                    'name' => 'Dutch',
+                    'lang' => NULL,
+                    'description' => 'Dutch Language',
+                    'reference' => 'dut-lang',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            29 =>
+                array (
+                    'id' => 30,
+                    'code_id' => 6,
+                    'name' => 'Italian',
+                    'lang' => NULL,
+                    'description' => 'Italian Language',
+                    'reference' => 'ita-lang',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            30 =>
+                array (
+                    'id' => 31,
+                    'code_id' => 7,
+                    'name' => 'Professional',
+                    'lang' => NULL,
+                    'description' => 'Professional Ref',
+                    'reference' => 'prof-ref',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            31 =>
+                array (
+                    'id' => 32,
+                    'code_id' => 7,
+                    'name' => 'Relative',
+                    'lang' => NULL,
+                    'description' => 'Relative Ref',
+                    'reference' => 'rel-ref',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
         ));
         $this->enableForeignKeys("code_values");
 

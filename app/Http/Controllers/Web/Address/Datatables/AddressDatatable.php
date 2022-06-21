@@ -1,10 +1,8 @@
 <?php
-
-namespace App\Http\Controllers\Web\Person\Traits;
-
-use App\Models\Employee\Address;
+namespace App\Http\Controllers\Web\Address\Datatables;
+use App\Models\Address\Address;
 use Illuminate\Support\Facades\DB;
-use Yajra\DataTables\DataTables;
+use Yajra\DataTables\Facades\DataTables;
 
 trait AddressDatatable
 {
@@ -28,7 +26,7 @@ trait AddressDatatable
                 return $address->district->name;
             })
             ->addColumn('action', function($query) {
-                return '<a href="'.route('person.address.show', $query->uuid).'">View</a>';
+                return '<a href="'.route('address.show', $query->uuid).'">View</a>';
             })
             ->rawColumns(['action','type'])
             ->make(true);

@@ -12,11 +12,8 @@ trait ExperienceDatatable
         $data = Experience::where('user_id', access()->id())->get();
         return DataTables::of($data)
             ->addIndexColumn()
-            ->editColumn('summary', function ($query) {
-                return substr($query->summary, 0, 50)."...";
-            })
-            ->editColumn('supervisor', function ($query) {
-                return substr($query->supervisor, 0, 50)."...";
+            ->editColumn('responsibilities', function ($query) {
+                return substr($query->responsibilities, 0, 50)."...";
             })
             ->editColumn('created_at', function ($query) {
                 return [
@@ -28,6 +25,6 @@ trait ExperienceDatatable
                 return '<a href="'.route('experience.show', $query->uuid).'">View</a>';
             })
             ->rawColumns(['action','type'])
-            ->make(true);;
+            ->make(true);
     }
 }

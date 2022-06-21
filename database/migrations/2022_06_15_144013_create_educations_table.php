@@ -23,7 +23,6 @@ class CreateEducationsTable extends Migration
             $table->date('start_year');
             $table->boolean('still_studying')->default(false);
             $table->date('end_year')->nullable();
-            $table->string('certificate', 100)->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

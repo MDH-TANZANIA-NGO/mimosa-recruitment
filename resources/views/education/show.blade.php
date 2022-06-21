@@ -29,20 +29,21 @@
                 &nbsp;
 
                 <div class="row">
-
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         {!! Form::label('award_received', "Course",['class'=>'form-label','required_asterik']) !!}
                         {!! Form::textarea('award_received', $education->award_received, ['class' => 'form-control', 'required','rows'=>'2']) !!}
                         {!! $errors->first('award_received', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
 
-
-                    <div class="col-4">
+                    <div class="col-3">
                         <label class="form-label">Upload Certificate</label>
                         <input type="file" class="form-control" name="certificate"></input>
                         @error('certificate')
                         <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong> </span>
                         @enderror
+                    </div>
+                    <div class="col-3">
+                        <a href="{{ $education->getFirstMediaUrl('certificates')}}" target="_blank">Preview Uploaded Certificate</a>
                     </div>
                 </div>
 

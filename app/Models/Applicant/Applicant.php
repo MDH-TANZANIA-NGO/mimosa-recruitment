@@ -2,9 +2,11 @@
 
 namespace App\Models\Applicant;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Applicant\Traits\ApplicantAttribute;
+use App\Models\Applicant\Traits\ApplicantRelationship;
+use App\Models\BaseModel;
 
-class Applicant extends Model
+class Applicant extends BaseModel
 {
-    //
+    use ApplicantAttribute, ApplicantRelationship;
 }

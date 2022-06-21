@@ -55,6 +55,20 @@ class CodesTableSeeder extends Seeder
                     'name' => 'Education Level',
                     'lang' => 'education_level',
                     'is_system_defined' => 1,
+                ),
+            5 =>
+                array (
+                    'id' => 6,
+                    'name' => 'Language',
+                    'lang' => 'language',
+                    'is_system_defined' => 1,
+                ),
+            6 =>
+                array (
+                    'id' => 7,
+                    'name' => 'reference Type',
+                    'lang' => 'reference_type',
+                    'is_system_defined' => 1,
                 )
         ));
         $this->enableForeignKeys("codes");

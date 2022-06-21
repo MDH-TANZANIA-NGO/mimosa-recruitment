@@ -17031,7 +17031,7 @@ Model.prototype = {
     },
 
     setReadOnly: function (properties) {
-        
+
     },
 
     // If path is null/undefined, return null/undefined.
@@ -36992,7 +36992,7 @@ var TreeNode = function (name, hostTree) {
     this.parentNode = null;
 
     /**
-     * Reference to list item.
+     * reference to list item.
      * Do not persistent dataIndex outside,
      * besause it may be changed by list.
      * If dataIndex -1,

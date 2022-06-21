@@ -14,7 +14,7 @@ class ExperienceController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function index()
     {
@@ -35,21 +35,26 @@ class ExperienceController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
+        //dd($request->all());
         Experience::create([
             'user_id' => access()->id(),
             'organisation_name' => $request->get('organisation_name'),
             'position' => $request->get('position'),
-            'summary' => $request->get('summary'),
-            'supervisor' => $request->get('supervisor'),
+            'responsibilities' => $request->get('responsibilities'),
+            'reason_for_leaving' => $request->get('reason_for_leaving'),
+            'supervisor_name' => $request->get('supervisor_name'),
+            'supervisor_email' => $request->get('supervisor_email'),
+            'supervisor_phone' => $request->get('supervisor_phone'),
+            'is_current' => $request->get('is_current'),
             'start_year' => $request->get('start_year'),
             'end_year' => $request->get('end_year')
         ]);
 
-        alert()->success('Academic Details Added Successfully','success');
+        alert()->success('Experience Details Added Successfully','success');
         return redirect()->route('experience.index');
     }
 
@@ -57,7 +62,7 @@ class ExperienceController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function show(Experience $experience)
     {
@@ -81,19 +86,12 @@ class ExperienceController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request, Experience $experience)
     {
-        $experience->update($request->only([
-            'organisation_name',
-            'position',
-            'summary',
-            'supervisor',
-            'start_year',
-            'end_year'
-        ]));
-
+        $experience->update($request->all());
+        alert()->success('Practical Experience Details Updated Successfully','success');
         return redirect()->route('experience.index');
     }
 

@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Web\Applicant;
+namespace App\Http\Controllers\Web\OtherInfo;
 
 use App\Http\Controllers\Controller;
-use App\Models\Applicant\Applicant;
-use App\Models\System\Country;
+use App\Models\Other\Other;
 use Illuminate\Http\Request;
 
-class ApplicantController extends Controller
+class OtherInfoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,26 +15,20 @@ class ApplicantController extends Controller
      */
     public function index()
     {
-        //dd(auth()->user());
-        $applicant = Applicant::where('user_id', access()->id())->first();
-        return view('applicant.index')
-            ->with('applicant', $applicant)
-            ->with('prefix', code_value()->query()->where('code_id',2)->pluck('name','id'))
-            ->with('gender', code_value()->query()->where('code_id',1)->pluck('name','id'))
-            ->with('countries', Country::all()->pluck('name', 'id'));
+        $otherInfo = Other::where('user_id', access()->id())->first();
+        return view('otherInfo.index')
+            ->with('otherInfo', $otherInfo)
+            ->with('languages', code_value()->query()->where('code_id',6)->pluck('name','id'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        return view('applicant.form.create')
-            ->with('prefix', code_value()->query()->where('code_id',2)->pluck('name','id'))
-            ->with('gender', code_value()->query()->where('code_id',1)->pluck('name','id'))
-            ->with('countries', Country::all()->pluck('name', 'id'));
+        //
     }
 
     /**
@@ -47,8 +40,7 @@ class ApplicantController extends Controller
     public function store(Request $request)
     {
         $request->merge(["user_id"=>access()->id()]);
-        Applicant::create($request->all());
-        alert()->success('Personal Information has been added Successfully!', 'success');
+        Other::create($request->all());
         return redirect()->back();
     }
 
@@ -79,13 +71,11 @@ class ApplicantController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Applicant $applicant)
+    public function update(Request $request, $id)
     {
-        $applicant->update($request->all());
-        alert()->success('Personal Information has been updated Successfully!', 'success');
-        return redirect()->back();
+        //
     }
 
     /**

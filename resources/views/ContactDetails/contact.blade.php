@@ -120,14 +120,6 @@
                                             <div class="alert-danger">{{$errors->first('gender')}} </div>
                                         </div>
                                     </div>
-
-
-
-
-
-
-
-
                                 </div>
                             </div>
 

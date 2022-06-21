@@ -14,12 +14,12 @@ class EducationController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function index()
     {
         return view('education.index')
-            ->with('educations', code_value()->query()->where('code_id',10)->get());
+            ->with('educations', code_value()->query()->where('code_id',5)->get());
     }
 
     /**
@@ -36,19 +36,22 @@ class EducationController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
-        Education::create([
+        $education =Education::create([
             'user_id' => access()->id(),
             'institution_name' => $request->get('institution_name'),
             'award_received' => $request->get('award_received'),
-            'certificate' => $request->file('certificate') ? $request->file('certificate')->store('hr/certificates') : null,
             'start_year' => $request->get('start_year'),
             'end_year' => $request->get('end_year'),
             'education_level_cv_id' => $request->get('education_level_cv_id'),
         ]);
+
+        if($request->hasFile('certificate') && $request->file('certificate')->isValid()){
+            $education->addMediaFromRequest('certificate')->toMediaCollection('certificates');
+        }
         alert()->success('Academic Details Added Successfully','success');
 
         return redirect()->back();
@@ -63,7 +66,7 @@ class EducationController extends Controller
     public function show(Education $education)
     {
         return view('education.show')
-            ->with('educations', code_value()->query()->where('code_id',8)->pluck('name','id'))
+            ->with('educations', code_value()->query()->where('code_id',5)->pluck('name','id'))
             ->with('education', $education);
     }
 
@@ -98,8 +101,9 @@ class EducationController extends Controller
             'education_level_cv_id'
         ]));
 
-        if ($request->file('certificate')){
-            $education->update(['certificate' =>  $request->file('certificate')->store('certificates')]);
+        if($request->hasFile('certificate') && $request->file('certificate')->isValid()){
+            $education->clearMediaCollection('certificates');
+            $education->addMediaFromRequest('certificate')->toMediaCollection('certificates');
         }
 
         return redirect()->route('education.index');

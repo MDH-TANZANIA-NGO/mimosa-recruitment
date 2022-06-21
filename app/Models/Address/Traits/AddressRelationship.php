@@ -1,12 +1,10 @@
 <?php
+namespace App\Models\Address\Traits;
 
-namespace App\Models\Employee;
-
-use App\Models\BaseModel;
 use App\Models\System\District;
 use App\Models\System\Region;
 
-class Address extends BaseModel
+trait AddressRelationship
 {
     public function region(){
         return $this->belongsTo(Region::class);
@@ -14,4 +12,5 @@ class Address extends BaseModel
     public function district(){
         return $this->belongsTo(District::class);
     }
+
 }
