@@ -372,6 +372,94 @@ class CodeValuesTableSeeder extends Seeder
                     'sort' => 0,
                     'isactive' => 1,
                 ),
+            32 =>
+                array (
+                    'id' => 33,
+                    'code_id' => 8,
+                    'name' => 'Character',
+                    'lang' => NULL,
+                    'description' => 'Character Category',
+                    'reference' => 'char-cat',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            33 =>
+                array (
+                    'id' => 34,
+                    'code_id' => 8,
+                    'name' => 'Professional',
+                    'lang' => NULL,
+                    'description' => 'Professional',
+                    'reference' => 'prof-cat',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            34 =>
+                array (
+                    'id' => 35,
+                    'code_id' => 8,
+                    'name' => 'Soft skills',
+                    'lang' => NULL,
+                    'description' => 'Soft skills',
+                    'reference' => 'soft-sk',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            35 =>
+                array (
+                    'id' => 36,
+                    'code_id' => 8,
+                    'name' => 'Other skills',
+                    'lang' => NULL,
+                    'description' => 'Other skills',
+                    'reference' => 'other-sk',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            36 =>
+                array (
+                    'id' => 37,
+                    'code_id' => 9,
+                    'name' => 'Very Good',
+                    'lang' => NULL,
+                    'description' => 'Very Good',
+                    'reference' => 'very-go',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            37 =>
+                array (
+                    'id' => 38,
+                    'code_id' => 9,
+                    'name' => 'Good',
+                    'lang' => NULL,
+                    'description' => 'Good',
+                    'reference' => 'good',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            38 =>
+                array (
+                    'id' => 39,
+                    'code_id' => 9,
+                    'name' => 'Intermediate',
+                    'lang' => NULL,
+                    'description' => 'Intermediate',
+                    'reference' => 'inter',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            39 =>
+                array (
+                    'id' => 40,
+                    'code_id' => 9,
+                    'name' => 'Poor',
+                    'lang' => NULL,
+                    'description' => 'poor',
+                    'reference' => 'poor',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
         ));
         $this->enableForeignKeys("code_values");
 

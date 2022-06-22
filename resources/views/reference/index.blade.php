@@ -13,7 +13,6 @@
                     <div class="card-options ">
                         <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
                     </div>
-
                 </div>
 
                 <div class="card-body">
@@ -25,7 +24,6 @@
                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong> </span>
                             @enderror
                         </div>
-
                         <div class="col-md-4" >
                             <label class="form-label">Position/Title</label>
                             <input class="form-control" name="position" placeholder="Position in the Organisation or Company" required></input>
@@ -33,20 +31,13 @@
                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong> </span>
                             @enderror
                         </div>
-
-                        <div class="col-md-4" >
-                            <label class="form-label">Reference Type</label>
-                            <select name="reference_type_cv_id" id="select-level" class="form-control custom-select">
-                                <option value=""  disabled selected hidden>Select Level</option>
-                                @foreach($references as $reference)
-                                    <option value="{{ $reference->id }}">{{$reference->name}}</option>
-                                @endforeach
-                            </select>
-                            @error('reference_type_cv_id')
-                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong> </span>
-                            @enderror
+                        <div class="col-md-4">
+                            <div class="form-group ">
+                                {!! Form::label('reference_type_cv_id', __("Reference Type"),['class'=>'form-label','required_asterik']) !!}
+                                {!! Form::select('reference_type_cv_id', $references, null, ['class' =>'form-control select2-show-search', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
+                                {!! $errors->first('reference_type_cv_id', '<span class="badge badge-danger">:message</span>') !!}
+                            </div>
                         </div>
-
                     </div>
                     &nbsp;
                     <div class="row">
@@ -79,7 +70,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 {!! Form::label('phone', __("label.phone"),['class'=>'form-label','required_asterik']) !!}
-                                {!! Form::number('phone',old('phone'),['class' => 'form-control', 'placeholder' => 'ie. 0712311311','required']) !!}
+                                {!! Form::text('phone',null, ['class' => 'form-control', 'placeholder' => 'ie. 0712311311','required']) !!}
                                 {!! $errors->first('phone', '<span class="badge badge-danger">:message</span>') !!}
                             </div>
                         </div>

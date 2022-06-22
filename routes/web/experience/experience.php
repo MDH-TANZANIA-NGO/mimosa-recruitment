@@ -1,4 +1,7 @@
 <?php
+
+use Illuminate\Support\Facades\Route;
+
 Route::group(['namespace' => 'Experience', 'middleware' => ['web', 'auth'], 'prefix' => 'experiences', 'as' => 'experience.'], function () {
     Route::get('', 'ExperienceController@index')->name('index');
     Route::get('create', 'ExperienceController@create')->name('create');

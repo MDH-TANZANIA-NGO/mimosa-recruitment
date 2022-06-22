@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::group(['namespace' => 'reference', 'middleware' => ['web', 'auth'], 'prefix' => 'references', 'as' => 'reference.'], function () {
+Route::group(['namespace' => 'Reference', 'middleware' => ['web', 'auth'], 'prefix' => 'references', 'as' => 'reference.'], function () {
     Route::get('', 'ReferenceController@index')->name('index');
     Route::get('create', 'ReferenceController@create')->name('create');
     Route::post('store', 'ReferenceController@store')->name('store');
@@ -12,6 +12,4 @@ Route::group(['namespace' => 'reference', 'middleware' => ['web', 'auth'], 'pref
     Route::group(['prefix' => 'datatable', 'as' => 'datatable.'], function () {
         Route::get('all', 'ReferenceController@allDatatable')->name('all');
     });
-
-
 });
