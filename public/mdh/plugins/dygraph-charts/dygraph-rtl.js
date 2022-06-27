@@ -407,7 +407,7 @@ module.exports = exports["default"];
  */
 
 /**
- * @fileoverview DataHandler implementation for the combination 
+ * @fileoverview DataHandler implementation for the combination
  * of error bars and fractions options.
  * @author David Eberlein (david.eberlein@ch.sauter-bc.com)
  */
@@ -527,7 +527,7 @@ module.exports = exports["default"];
  */
 
 /**
- * @fileoverview DataHandler base implementation for the "bar" 
+ * @fileoverview DataHandler base implementation for the "bar"
  * data formats. This implementation must be extended and the
  * extractSeries and rollingAverage must be implemented.
  * @author David Eberlein (david.eberlein@ch.sauter-bc.com)
@@ -564,13 +564,13 @@ BarsHandler.prototype = new _datahandler2['default']();
 //   (I get closure compiler errors if this isn't here.)
 /**
  * @override
- * @param {!Array.<Array>} rawData The raw data passed into dygraphs where 
+ * @param {!Array.<Array>} rawData The raw data passed into dygraphs where
  *     rawData[i] = [x,ySeries1,...,ySeriesN].
  * @param {!number} seriesIndex Index of the series to extract. All other
  *     series should be ignored.
  * @param {!DygraphOptions} options Dygraph options.
  * @return {Array.<[!number,?number,?]>} The series in the unified data format
- *     where series[i] = [x,y,{extras}]. 
+ *     where series[i] = [x,y,{extras}].
  */
 BarsHandler.prototype.extractSeries = function (rawData, seriesIndex, options) {
   // Not implemented here must be extended
@@ -578,7 +578,7 @@ BarsHandler.prototype.extractSeries = function (rawData, seriesIndex, options) {
 
 /**
  * @override
- * @param {!Array.<[!number,?number,?]>} series The series in the unified 
+ * @param {!Array.<[!number,?number,?]>} series The series in the unified
  *          data format where series[i] = [x,y,{extras}].
  * @param {!number} rollPeriod The number of points over which to average the data
  * @param {!DygraphOptions} options The dygraph options.
@@ -4279,7 +4279,7 @@ DygraphOptions.prototype.getGlobalDefault_ = function (name) {
  * the global value is returned.
  *
  * @param {string} name the name of the option.
- * @param {string|number} axis the axis to search. Can be the string representation
+ * @param {string|number} axis the axis to vacancy. Can be the string representation
  * ("y", "y2") or the axis number (0, 1).
  */
 DygraphOptions.prototype.getForAxis = function (name, axis) {
@@ -4340,7 +4340,7 @@ DygraphOptions.prototype.getForAxis = function (name, axis) {
  * the value for the axis is returned (and afterwards, the global value.)
  *
  * @param {string} name the name of the option.
- * @param {string} series the series to search.
+ * @param {string} series the series to vacancy.
  */
 DygraphOptions.prototype.getForSeries = function (name, series) {
   // Honors indexes as series.
@@ -4952,7 +4952,7 @@ exports.getDateAxis = getDateAxis;
  * @fileoverview This file contains utility functions used by dygraphs. These
  * are typically static (i.e. not related to any particular dygraph). Examples
  * include date/time formatting functions, basic algorithms (e.g. binary
- * search) and generic DOM-manipulation functions.
+ * vacancy) and generic DOM-manipulation functions.
  */
 
 /*global Dygraph:false, Node:false */
@@ -5506,10 +5506,10 @@ function round_(num, places) {
 ;
 
 /**
- * Implementation of binary search over an array.
+ * Implementation of binary vacancy over an array.
  * Currently does not work when val is outside the range of arry's values.
- * @param {number} val the value to search for
- * @param {Array.<number>} arry is the value over which to search
+ * @param {number} val the value to vacancy for
+ * @param {Array.<number>} arry is the value over which to vacancy
  * @param {number} abs If abs > 0, find the lowest entry greater than val
  *     If abs < 0, find the highest entry less than val.
  *     If abs == 0, find the entry that equals val.
@@ -6968,7 +6968,7 @@ var canvasx=this.selPoints_[0].canvasx;ctx.save();for(i = 0;i < this.selPoints_.
  * to unlock it.
  */Dygraph.prototype.setSelection = function(row,opt_seriesName,opt_locked){ // Extract the points we've selected
 this.selPoints_ = [];var changed=false;if(row !== false && row >= 0){if(row != this.lastRow_)changed = true;this.lastRow_ = row;for(var setIdx=0;setIdx < this.layout_.points.length;++setIdx) {var points=this.layout_.points[setIdx]; // Check if the point at the appropriate index is the point we're looking
-// for.  If it is, just use it, otherwise search the array for a point
+// for.  If it is, just use it, otherwise vacancy the array for a point
 // in the proper place.
 var setRow=row - this.getrightBoundary_(setIdx);if(setRow >= 0 && setRow < points.length && points[setRow].idx == row){var point=points[setRow];if(point.yval !== null)this.selPoints_.push(point);}else {for(var pointIdx=0;pointIdx < points.length;++pointIdx) {var point=points[pointIdx];if(point.idx == row){if(point.yval !== null){this.selPoints_.push(point);}break;}}}}}else {if(this.lastRow_ >= 0)changed = true;this.lastRow_ = -1;}if(this.selPoints_.length){this.lastx_ = this.selPoints_[0].xval;}else {this.lastx_ = -1;}if(opt_seriesName !== undefined){if(this.highlightSet_ !== opt_seriesName)changed = true;this.highlightSet_ = opt_seriesName;}if(opt_locked !== undefined){this.lockedSet_ = opt_locked;}if(changed){this.updateSelection_(undefined);}return changed;}; /**
  * The mouse has right the canvas. Clear out whatever artifacts remain
@@ -7094,7 +7094,7 @@ var seriesIdx,sampleIdx;var firstIdx,lastIdx;var axisIdx; // Loop over the field
 var num_series=rolledSeries.length - 1;var series;for(seriesIdx = num_series;seriesIdx >= 1;seriesIdx--) {if(!this.visibility()[seriesIdx - 1])continue; // Prune down to the desired range, if necessary (for zooming)
 // Because there can be lines going to points outside of the visible area,
 // we actually prune to visible points, plus one on either side.
-if(dateWindow){series = rolledSeries[seriesIdx];var low=dateWindow[0];var high=dateWindow[1]; // TODO(danvk): do binary search instead of linear search.
+if(dateWindow){series = rolledSeries[seriesIdx];var low=dateWindow[0];var high=dateWindow[1]; // TODO(danvk): do binary vacancy instead of linear vacancy.
 // TODO(danvk): pass firstIdx and lastIdx directly to the renderer.
 firstIdx = null;lastIdx = null;for(sampleIdx = 0;sampleIdx < series.length;sampleIdx++) {if(series[sampleIdx][0] >= low && firstIdx === null){firstIdx = sampleIdx;}if(series[sampleIdx][0] <= high){lastIdx = sampleIdx;}}if(firstIdx === null)firstIdx = 0;var correctedFirstIdx=firstIdx;var isInvalidValue=true;while(isInvalidValue && correctedFirstIdx > 0) {correctedFirstIdx--; // check if the y value is null.
 isInvalidValue = series[correctedFirstIdx][1] === null;}if(lastIdx === null)lastIdx = series.length - 1;var correctedLastIdx=lastIdx;isInvalidValue = true;while(isInvalidValue && correctedLastIdx < series.length - 1) {correctedLastIdx++;isInvalidValue = series[correctedLastIdx][1] === null;}if(correctedFirstIdx !== firstIdx){firstIdx = correctedFirstIdx;}if(correctedLastIdx !== lastIdx){lastIdx = correctedLastIdx;}boundaryIds[seriesIdx - 1] = [firstIdx,lastIdx]; // .slice's end is exclusive, we want to include lastIdx.

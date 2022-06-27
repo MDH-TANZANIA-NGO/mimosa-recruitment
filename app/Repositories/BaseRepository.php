@@ -73,7 +73,7 @@ class BaseRepository
     /**
      * @param array $input
      * @return mixed
-     * Regex column search
+     * Regex column vacancy
      */
     public function regexColumnSearch(array $input)
     {

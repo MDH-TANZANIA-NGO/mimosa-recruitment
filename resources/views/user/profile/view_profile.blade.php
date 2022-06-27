@@ -39,7 +39,7 @@
                                         @if($user->assignedSupervisor() == null)
                                             <td>Assign Supervisor:
                                                 {!! Form::open(['route' => ['user.assign_supervisor_individual'],'method' => 'POST']) !!}
-                                                {!! Form::select('supervisor',$supervisors,null,['class' => 'form-control select2-show-search', 'style'=>'width: 100%']) !!}
+                                                {!! Form::select('supervisor',$supervisors,null,['class' => 'form-control select2-show-vacancy', 'style'=>'width: 100%']) !!}
                                                 <input type="number" name="user_id" value="{{$user->id}}" hidden><br>
                                                 <input type="submit" value="Assign" class="btn btn-outline-info text-center btn-block" style="margin-top: 3%">
                                                 {!! Form::close() !!}
@@ -170,14 +170,14 @@
                                     <div class="col-md-4">
                                         <div class="form-group ">
                                             {!! Form::label('designation', __("label.designation"),['class'=>'form-label','required_asterik']) !!}
-                                            {!! Form::select('designation', $designations, $user->designation_id, ['class' =>'form-control select2-show-search', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
+                                            {!! Form::select('designation', $designations, $user->designation_id, ['class' =>'form-control select2-show-vacancy', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
                                             {!! $errors->first('designation', '<span class="badge badge-danger">:message</span>') !!}
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group ">
                                             {!! Form::label('region', __("label.region"),['class'=>'form-label','required_asterik']) !!}
-                                            {!! Form::select('region', $regions, $user->region_id, ['class' =>'form-control select2-show-search', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
+                                            {!! Form::select('region', $regions, $user->region_id, ['class' =>'form-control select2-show-vacancy', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
                                             {!! $errors->first('region', '<span class="badge badge-danger">:message</span>') !!}
                                         </div>
                                     </div>
@@ -186,7 +186,7 @@
                                     <div class="col-md-4">
                                         <div class="form-group ">
                                             {!! Form::label('projects', __("label.project").'(s)',['class'=>'form-label','required_asterik']) !!}
-                                            {!! Form::select('projects[]', $projects, $user_projects, ['class' =>'form-control select2-show-search', 'aria-describedby' => '','multiple']) !!}
+                                            {!! Form::select('projects[]', $projects, $user_projects, ['class' =>'form-control select2-show-vacancy', 'aria-describedby' => '','multiple']) !!}
                                             {!! $errors->first('projects', '<span class="badge badge-danger">:message</span>') !!}
 
                                         </div>
@@ -242,7 +242,7 @@
                                     <label class="form-label">Select Employee</label>
                                     <div class="input-group">
                                         {{--                                                                    <input type="text" class="form-control" placeholder="Search for...">--}}
-                                        {!! Form::select('users[]',$users,null,['class' => 'form-control select2-show-search', 'multiple','style'=>'width: 100%']) !!}
+                                        {!! Form::select('users[]',$users,null,['class' => 'form-control select2-show-vacancy', 'multiple','style'=>'width: 100%']) !!}
 
                                     </div>
                                     &nbsp;

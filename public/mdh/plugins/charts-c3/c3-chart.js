@@ -56,7 +56,7 @@
         internal.tickTextCharSize;
         internal.tickTextRotate = internal.params.tickTextRotate;
         internal.tickLength;
-		
+
         internal.axis = internal.generateAxis();
     }
 
@@ -6812,7 +6812,7 @@
         maxY = config.data_selection_grouped ? $$.height : Math.max(sy, my);
 
         main.select('.' + CLASS.dragarea).attr('x', minX).attr('y', minY).attr('width', maxX - minX).attr('height', maxY - minY);
-        // TODO: binary search when multiple xs
+        // TODO: binary vacancy when multiple xs
         main.selectAll('.' + CLASS.shapes).selectAll('.' + CLASS.shape).filter(function (d) {
             return config.data_selection_isselectable(d);
         }).each(function (d, i) {

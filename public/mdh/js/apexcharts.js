@@ -13225,7 +13225,7 @@ $export($export.G + $export.W + $export.F * !USE_NATIVE, { Symbol: $Symbol });
 
 for (var es6Symbols =
 // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14
-'hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables'.split(','), j = 0; es6Symbols.length > j;) {
+'hasInstance,isConcatSpreadable,iterator,match,replace,vacancy,species,split,toPrimitive,toStringTag,unscopables'.split(','), j = 0; es6Symbols.length > j;) {
   wks(es6Symbols[j++]);
 }for (var wellKnownSymbols = $keys(wks.store), k = 0; wellKnownSymbols.length > k;) {
   wksDefine(wellKnownSymbols[k++]);
@@ -22378,7 +22378,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     // fire beforedrag event
     this.el.fire('beforedrag', { event: e, handler: this });
 
-    // search for parent on the fly to make sure we can call
+    // vacancy for parent on the fly to make sure we can call
     // draggable() even when element is not in the dom currently
     this.parent = this.parent || this.el.parent(SVG.Nested) || this.el.parent(SVG.Doc);
     this.p = this.parent.node.createSVGPoint();

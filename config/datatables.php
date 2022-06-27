@@ -2,22 +2,22 @@
 
 return [
     /*
-     * DataTables search options.
+     * DataTables vacancy options.
      */
-    'search'         => [
+    'vacancy'         => [
         /*
-         * Smart search will enclose search keyword with wildcard string "%keyword%".
+         * Smart vacancy will enclose vacancy keyword with wildcard string "%keyword%".
          * SQL: column LIKE "%keyword%"
          */
         'smart'            => true,
 
         /*
-         * Multi-term search will explode search keyword using spaces resulting into multiple term search.
+         * Multi-term vacancy will explode vacancy keyword using spaces resulting into multiple term vacancy.
          */
         'multi_term'       => true,
 
         /*
-         * Case insensitive will search the keyword in lower case format.
+         * Case insensitive will vacancy the keyword in lower case format.
          * SQL: LOWER(column) LIKE LOWER(keyword)
          */
         'case_insensitive' => true,
@@ -29,7 +29,7 @@ return [
         'use_wildcards'    => false,
 
         /*
-         * Perform a search which starts with the given keyword.
+         * Perform a vacancy which starts with the given keyword.
          * SQL: column LIKE "keyword%"
          */
         'starts_with'      => false,
@@ -105,7 +105,7 @@ return [
         'blacklist' => ['password', 'remember_token'],
 
         /*
-         * List of columns that are only allowed fo search/sort.
+         * List of columns that are only allowed fo vacancy/sort.
          * If set to *, all columns are allowed.
          */
         'whitelist' => '*',

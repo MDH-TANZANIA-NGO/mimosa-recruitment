@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -76,7 +76,7 @@ select {
   pointer-events: none;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Patterns - reusable parts of our design
 
@@ -89,7 +89,7 @@ Patterns - reusable parts of our design
   white-space: nowrap;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Header
 
@@ -324,7 +324,7 @@ Header
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Search Form
 
@@ -334,7 +334,7 @@ Search Form
   display: none;
 }
 .cd-main-search .close {
-  /* 'X' icon to close search form - hidden on small devices */
+  /* 'X' icon to close vacancy form - hidden on small devices */
   display: none;
 }
 .cd-main-search input[type="search"] {
@@ -375,7 +375,7 @@ Search Form
     position: relative;
     height: 100%;
     /* 170px (margin left) is the sum of the logo width (124px) and additional 46px margin (to separate the form form the logo) */
-    /* 116px (margin right) takes into account the space occupied by the a.cd-search-trigger and a.close */
+    /* 116px (margin right) takes into account the space occupied by the a.cd-vacancy-trigger and a.close */
     margin: 0 calc(5% + 116px) 0 calc(5% + 170px);
   }
   .cd-main-search input[type="search"] {
@@ -461,7 +461,7 @@ Search Form
     background-color: #3d3f4e;
   }
   .cd-main-search .close {
-    /* 'X' icon - used to close the search form */
+    /* 'X' icon - used to close the vacancy form */
     display: inline-block;
     position: absolute;
     right: 5%;
@@ -502,7 +502,7 @@ Search Form
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
   }
   .cd-main-search.is-visible {
-    /* search form open */
+    /* vacancy form open */
     opacity: 1;
     visibility: visible;
   }
@@ -514,7 +514,7 @@ Search Form
     transform: translateY(-50%) scale(1);
   }
   .animate-search .cd-main-search.is-visible {
-    /* trigger search form animation if <header> has the .animate-search class */
+    /* trigger vacancy form animation if <header> has the .animate-vacancy class */
     -webkit-animation: cd-slide-in 0.3s;
     -moz-animation: cd-slide-in 0.3s;
     animation: cd-slide-in 0.3s;
@@ -554,7 +554,7 @@ Search Form
   }
 }
 .cd-search-suggestions {
-  /* drowpdown with search suggestions - hidden on small devices */
+  /* drowpdown with vacancy suggestions - hidden on small devices */
   display: none;
 }
 @media only screen and (min-width: 1024px) {
@@ -649,7 +649,7 @@ Search Form
     line-height: 1.2;
   }
   .animate-search .is-visible .cd-search-suggestions {
-    /* trigger the dropdown animation if <header> has the .animate-search class */
+    /* trigger the dropdown animation if <header> has the .animate-vacancy class */
     -webkit-transform-origin: center top;
     -moz-transform-origin: center top;
     -ms-transform-origin: center top;
@@ -777,13 +777,13 @@ Search Form
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Content cover layer
 
 -------------------------------- */
 .cd-cover-layer {
-  /* cover main content when search form is open - hidden on smal devices */
+  /* cover main content when vacancy form is open - hidden on smal devices */
   display: none;
 }
 @media only screen and (min-width: 1024px) {
@@ -808,7 +808,7 @@ Content cover layer
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Page main content
 
@@ -869,7 +869,7 @@ Page main content
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 JavaScript Disabled
 

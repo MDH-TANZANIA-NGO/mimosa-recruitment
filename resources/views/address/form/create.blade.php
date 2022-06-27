@@ -25,7 +25,7 @@
                 <div class="col-sm-6 col-md-4">
                     <div class="form-group">
                         {!! Form::label('district_id', __("label.district"),['class'=>'form-label','required_asterik']) !!}
-                        {!! Form::select('district_id', $districts, null, ['class' =>'form-control select2-show-search', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
+                        {!! Form::select('district_id', $districts, null, ['class' =>'form-control select2-show-vacancy', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
                         {!! $errors->first('district_id', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
                 </div>

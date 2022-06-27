@@ -34,7 +34,7 @@
                                     <label class="form-label">Select Employee</label>
                                     <div class="input-group">
                                         {{--                                                                    <input type="text" class="form-control" placeholder="Search for...">--}}
-                                        {!! Form::select('users[]',$users,null,['class' => 'form-control select2-show-search', 'multiple','style'=>'width: 100%']) !!}
+                                        {!! Form::select('users[]',$users,null,['class' => 'form-control select2-show-vacancy', 'multiple','style'=>'width: 100%']) !!}
 
                                     </div>
                                     &nbsp;

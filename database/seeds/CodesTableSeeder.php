@@ -83,6 +83,13 @@ class CodesTableSeeder extends Seeder
                     'name' => 'Skill Level',
                     'lang' => 'skill_level',
                     'is_system_defined' => 1,
+                ),
+            9 =>
+                array (
+                    'id' => 10,
+                    'name' => 'Document Type',
+                    'lang' => 'document_type',
+                    'is_system_defined' => 1,
                 )
         ));
         $this->enableForeignKeys("codes");

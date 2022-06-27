@@ -2589,7 +2589,7 @@ var menu = $.widget( "ui.menu", {
 	},
 
 	// With no arguments, closes the currently active menu - if nothing is active
-	// it closes all menus.  If passed an argument, it will search for menus BELOW
+	// it closes all menus.  If passed an argument, it will vacancy for menus BELOW
 	_close: function( startMenu ) {
 		if ( !startMenu ) {
 			startMenu = this.active ? this.active.parent() : this.element;
@@ -2803,7 +2803,7 @@ $.widget( "ui.autocomplete", {
 		// Unfortunately the code for & in keypress is the same as the up arrow,
 		// so we use the suppressKeyPressRepeat flag to avoid handling keypress
 		// events when we know the keydown event was used to modify the
-		// search term. #7799
+		// vacancy term. #7799
 		var suppressKeyPress, suppressKeyPressRepeat, suppressInput,
 			nodeName = this.element[ 0 ].nodeName.toLowerCase(),
 			isTextarea = nodeName === "textarea",
@@ -2884,7 +2884,7 @@ $.widget( "ui.autocomplete", {
 					break;
 				default:
 					suppressKeyPressRepeat = true;
-					// search timeout should be triggered before the input value is changed
+					// vacancy timeout should be triggered before the input value is changed
 					this._searchTimeout( event );
 					break;
 				}
@@ -3341,7 +3341,7 @@ $.extend( $.ui.autocomplete, {
 $.widget( "ui.autocomplete", $.ui.autocomplete, {
 	options: {
 		messages: {
-			noResults: "No search results.",
+			noResults: "No vacancy results.",
 			results: function( amount ) {
 				return amount + ( amount > 1 ? " results are" : " result is" ) +
 					" available, use up and down arrow keys to navigate.";
@@ -3568,7 +3568,7 @@ $.widget( "ui.button", {
 		}
 
 		if ( this.type === "checkbox" || this.type === "radio" ) {
-			// we don't search against the document in case the element
+			// we don't vacancy against the document in case the element
 			// is disconnected from the DOM
 			ancestor = this.element.parents().last();
 			labelSelector = "label[for='" + this.element.attr("id") + "']";

@@ -63,7 +63,7 @@
                     <div class="col-md-4">
                         <div class="form-group ">
                             {!! Form::label('country_id', __("Country"),['class'=>'form-label','required_asterik']) !!}
-                            {!! Form::select('country_id', $countries, null, ['class' =>'form-control select2-show-search', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
+                            {!! Form::select('country_id', $countries, null, ['class' =>'form-control select2-show-vacancy', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
                             {!! $errors->first('country_id', '<span class="badge badge-danger">:message</span>') !!}
                         </div>
                     </div>

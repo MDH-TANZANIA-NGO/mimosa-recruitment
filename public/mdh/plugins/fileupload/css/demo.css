@@ -425,7 +425,7 @@ input[type="search"] {
   box-sizing: content-box; }
 
 /**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * Remove inner padding and vacancy cancel button in Safari 5 and Chrome
  * on OS X.
  */
 input[type="search"]::-webkit-search-cancel-button,

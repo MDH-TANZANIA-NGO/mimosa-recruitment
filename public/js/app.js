@@ -8912,7 +8912,7 @@ Expr = Sizzle.selectors = {
 				elem.type === "text" &&
 
 				// Support: IE<8
-				// New HTML5 attribute values (e.g., "search") appear with elem.type === "text"
+				// New HTML5 attribute values (e.g., "vacancy") appear with elem.type === "text"
 				( ( attr = elem.getAttribute( "type" ) ) == null ||
 					attr.toLowerCase() === "text" );
 		},
@@ -18164,11 +18164,11 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
   /**
    * A specialized version of `_.includes` for arrays without support for
-   * specifying an index to search from.
+   * specifying an index to vacancy from.
    *
    * @private
    * @param {Array} [array] The array to inspect.
-   * @param {*} target The value to search for.
+   * @param {*} target The value to vacancy for.
    * @returns {boolean} Returns `true` if `target` is found, else `false`.
    */
   function arrayIncludes(array, value) {
@@ -18181,7 +18181,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
    *
    * @private
    * @param {Array} [array] The array to inspect.
-   * @param {*} target The value to search for.
+   * @param {*} target The value to vacancy for.
    * @param {Function} comparator The comparator invoked per element.
    * @returns {boolean} Returns `true` if `target` is found, else `false`.
    */
@@ -18366,7 +18366,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
    * @private
    * @param {Array} array The array to inspect.
    * @param {Function} predicate The function invoked per iteration.
-   * @param {number} fromIndex The index to search from.
+   * @param {number} fromIndex The index to vacancy from.
    * @param {boolean} [fromRight] Specify iterating from right to left.
    * @returns {number} Returns the index of the matched value, else `-1`.
    */
@@ -18387,8 +18387,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
    *
    * @private
    * @param {Array} array The array to inspect.
-   * @param {*} value The value to search for.
-   * @param {number} fromIndex The index to search from.
+   * @param {*} value The value to vacancy for.
+   * @param {number} fromIndex The index to vacancy from.
    * @returns {number} Returns the index of the matched value, else `-1`.
    */
   function baseIndexOf(array, value, fromIndex) {
@@ -18402,8 +18402,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
    *
    * @private
    * @param {Array} array The array to inspect.
-   * @param {*} value The value to search for.
-   * @param {number} fromIndex The index to search from.
+   * @param {*} value The value to vacancy for.
+   * @param {number} fromIndex The index to vacancy from.
    * @param {Function} comparator The comparator invoked per element.
    * @returns {number} Returns the index of the matched value, else `-1`.
    */
@@ -18661,7 +18661,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
    *
    * @private
    * @param {Array} array The array to inspect.
-   * @param {*} placeholder The placeholder to search for.
+   * @param {*} placeholder The placeholder to vacancy for.
    * @returns {number} Returns the placeholder count.
    */
   function countHolders(array, placeholder) {
@@ -18853,8 +18853,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
    *
    * @private
    * @param {Array} array The array to inspect.
-   * @param {*} value The value to search for.
-   * @param {number} fromIndex The index to search from.
+   * @param {*} value The value to vacancy for.
+   * @param {number} fromIndex The index to vacancy from.
    * @returns {number} Returns the index of the matched value, else `-1`.
    */
   function strictIndexOf(array, value, fromIndex) {
@@ -18875,8 +18875,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
    *
    * @private
    * @param {Array} array The array to inspect.
-   * @param {*} value The value to search for.
-   * @param {number} fromIndex The index to search from.
+   * @param {*} value The value to vacancy for.
+   * @param {number} fromIndex The index to vacancy from.
    * @returns {number} Returns the index of the matched value, else `-1`.
    */
   function strictLastIndexOf(array, value, fromIndex) {
@@ -19861,7 +19861,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @private
      * @name has
      * @memberOf SetCache
-     * @param {*} value The value to search for.
+     * @param {*} value The value to vacancy for.
      * @returns {number} Returns `true` if `value` is found, else `false`.
      */
     function setCacheHas(value) {
@@ -20085,7 +20085,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      *
      * @private
      * @param {Array} array The array to inspect.
-     * @param {*} key The key to search for.
+     * @param {*} key The key to vacancy for.
      * @returns {number} Returns the index of the matched value, else `-1`.
      */
     function assocIndexOf(array, key) {
@@ -21705,7 +21705,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
     /**
      * The base implementation of `_.sortedIndex` and `_.sortedLastIndex` which
-     * performs a binary search of `array` to determine the index at which `value`
+     * performs a binary vacancy of `array` to determine the index at which `value`
      * should be inserted into `array` in order to maintain its sort order.
      *
      * @private
@@ -24847,7 +24847,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @category Array
      * @param {Array} array The array to inspect.
      * @param {Function} [predicate=_.identity] The function invoked per iteration.
-     * @param {number} [fromIndex=0] The index to search from.
+     * @param {number} [fromIndex=0] The index to vacancy from.
      * @returns {number} Returns the index of the found element, else `-1`.
      * @example
      *
@@ -24894,7 +24894,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @category Array
      * @param {Array} array The array to inspect.
      * @param {Function} [predicate=_.identity] The function invoked per iteration.
-     * @param {number} [fromIndex=array.length-1] The index to search from.
+     * @param {number} [fromIndex=array.length-1] The index to vacancy from.
      * @returns {number} Returns the index of the found element, else `-1`.
      * @example
      *
@@ -25061,8 +25061,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @since 0.1.0
      * @category Array
      * @param {Array} array The array to inspect.
-     * @param {*} value The value to search for.
-     * @param {number} [fromIndex=0] The index to search from.
+     * @param {*} value The value to vacancy for.
+     * @param {number} [fromIndex=0] The index to vacancy from.
      * @returns {number} Returns the index of the matched value, else `-1`.
      * @example
      *
@@ -25246,8 +25246,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @since 0.1.0
      * @category Array
      * @param {Array} array The array to inspect.
-     * @param {*} value The value to search for.
-     * @param {number} [fromIndex=array.length-1] The index to search from.
+     * @param {*} value The value to vacancy for.
+     * @param {number} [fromIndex=array.length-1] The index to vacancy from.
      * @returns {number} Returns the index of the matched value, else `-1`.
      * @example
      *
@@ -25551,7 +25551,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     }
 
     /**
-     * Uses a binary search to determine the lowest index at which `value`
+     * Uses a binary vacancy to determine the lowest index at which `value`
      * should be inserted into `array` in order to maintain its sort order.
      *
      * @static
@@ -25602,14 +25602,14 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
     /**
      * This method is like `_.indexOf` except that it performs a binary
-     * search on a sorted `array`.
+     * vacancy on a sorted `array`.
      *
      * @static
      * @memberOf _
      * @since 4.0.0
      * @category Array
      * @param {Array} array The array to inspect.
-     * @param {*} value The value to search for.
+     * @param {*} value The value to vacancy for.
      * @returns {number} Returns the index of the matched value, else `-1`.
      * @example
      *
@@ -25680,14 +25680,14 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
     /**
      * This method is like `_.lastIndexOf` except that it performs a binary
-     * search on a sorted `array`.
+     * vacancy on a sorted `array`.
      *
      * @static
      * @memberOf _
      * @since 4.0.0
      * @category Array
      * @param {Array} array The array to inspect.
-     * @param {*} value The value to search for.
+     * @param {*} value The value to vacancy for.
      * @returns {number} Returns the index of the matched value, else `-1`.
      * @example
      *
@@ -26814,7 +26814,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @category Collection
      * @param {Array|Object} collection The collection to inspect.
      * @param {Function} [predicate=_.identity] The function invoked per iteration.
-     * @param {number} [fromIndex=0] The index to search from.
+     * @param {number} [fromIndex=0] The index to vacancy from.
      * @returns {*} Returns the matched element, else `undefined`.
      * @example
      *
@@ -26851,7 +26851,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @category Collection
      * @param {Array|Object} collection The collection to inspect.
      * @param {Function} [predicate=_.identity] The function invoked per iteration.
-     * @param {number} [fromIndex=collection.length-1] The index to search from.
+     * @param {number} [fromIndex=collection.length-1] The index to vacancy from.
      * @returns {*} Returns the matched element, else `undefined`.
      * @example
      *
@@ -27040,8 +27040,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @since 0.1.0
      * @category Collection
      * @param {Array|Object|string} collection The collection to inspect.
-     * @param {*} value The value to search for.
-     * @param {number} [fromIndex=0] The index to search from.
+     * @param {*} value The value to vacancy for.
+     * @param {number} [fromIndex=0] The index to vacancy from.
      * @param- {Object} [guard] Enables use as an iteratee for methods like `_.reduce`.
      * @returns {boolean} Returns `true` if `value` is found, else `false`.
      * @example
@@ -31821,8 +31821,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @since 3.0.0
      * @category String
      * @param {string} [string=''] The string to inspect.
-     * @param {string} [target] The string to search for.
-     * @param {number} [position=string.length] The position to search up to.
+     * @param {string} [target] The string to vacancy for.
+     * @param {number} [position=string.length] The position to vacancy up to.
      * @returns {boolean} Returns `true` if `string` ends with `target`,
      *  else `false`.
      * @example
@@ -32268,8 +32268,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * @since 3.0.0
      * @category String
      * @param {string} [string=''] The string to inspect.
-     * @param {string} [target] The string to search for.
-     * @param {number} [position=0] The position to search from.
+     * @param {string} [target] The string to vacancy for.
+     * @param {number} [position=0] The position to vacancy from.
      * @returns {boolean} Returns `true` if `string` starts with `target`,
      *  else `false`.
      * @example
@@ -37617,7 +37617,7 @@ process.umask = function() { return 0; };
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -37631,20 +37631,20 @@ process.umask = function() { return 0; };
 /******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/ 	
+/******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/chunk loaded */
 /******/ 	(() => {
@@ -37677,7 +37677,7 @@ process.umask = function() { return 0; };
 /******/ 			return result;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -37689,7 +37689,7 @@ process.umask = function() { return 0; };
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -37701,12 +37701,12 @@ process.umask = function() { return 0; };
 /******/ 			}
 /******/ 		})();
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -37717,7 +37717,7 @@ process.umask = function() { return 0; };
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nmd = (module) => {
@@ -37726,11 +37726,11 @@ process.umask = function() { return 0; };
 /******/ 			return module;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	(() => {
 /******/ 		// no baseURI
-/******/ 		
+/******/
 /******/ 		// object to store loaded and loading chunks
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
@@ -37738,19 +37738,19 @@ process.umask = function() { return 0; };
 /******/ 			"/js/app": 0,
 /******/ 			"css/app": 0
 /******/ 		};
-/******/ 		
+/******/
 /******/ 		// no chunk on demand loading
-/******/ 		
+/******/
 /******/ 		// no prefetching
-/******/ 		
+/******/
 /******/ 		// no preloaded
-/******/ 		
+/******/
 /******/ 		// no HMR
-/******/ 		
+/******/
 /******/ 		// no HMR manifest
-/******/ 		
+/******/
 /******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/ 		
+/******/
 /******/ 		// install a JSONP callback for chunk loading
 /******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
 /******/ 			var [chunkIds, moreModules, runtime] = data;
@@ -37775,20 +37775,20 @@ process.umask = function() { return 0; };
 /******/ 			}
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
-/******/ 		
+/******/
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
-/******/ 	
+/******/
 /************************************************************************/
-/******/ 	
+/******/
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/ 	
+/******/
 /******/ })()
 ;

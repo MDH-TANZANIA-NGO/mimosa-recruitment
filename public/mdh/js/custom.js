@@ -1,6 +1,6 @@
 (function($) {
     "use strict";
-	
+
 	// ______________ Horizonatl
 	$(document).ready(function() {
       $("a[data-theme]").click(function() {
@@ -12,8 +12,8 @@
         $(this).toggleClass('active').siblings().removeClass('active');
       });
     });
-	
-	
+
+
 	// ______________Full screen
 	$("#fullscreen-button").on("click", function toggleFullScreen() {
       if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
@@ -38,8 +38,8 @@
         }
       }
     })
-	
-	
+
+
 	// ______________ Page Loading
 	$(window).on("load", function(e) {
 		$("#global-loader").fadeOut("slow");
@@ -59,7 +59,7 @@
         }, 600);
         return false;
     });
-	
+
 	// ______________ StarRating
 	var ratingOptions = {
 		selectors: {
@@ -72,7 +72,7 @@
 		}
 	};
 	$(".rating-stars").ratingStars(ratingOptions);
-	
+
 	// ______________ Chart-circle
 	if ($('.chart-circle').length) {
 		$('.chart-circle').each(function() {
@@ -89,17 +89,17 @@
 			});
 		});
 	}
-	
+
 	// ______________ Global Search
-	$(document).on("click", "[data-toggle='search']", function(e) {
+	$(document).on("click", "[data-toggle='vacancy']", function(e) {
 		var body = $("body");
 
-		if(body.hasClass('search-gone')) {
-			body.addClass('search-gone');
-			body.removeClass('search-show');
+		if(body.hasClass('vacancy-gone')) {
+			body.addClass('vacancy-gone');
+			body.removeClass('vacancy-show');
 		}else{
-			body.removeClass('search-gone');
-			body.addClass('search-show');
+			body.removeClass('vacancy-gone');
+			body.addClass('vacancy-show');
 		}
 	});
 	var toggleSidebar = function() {
@@ -119,16 +119,16 @@
 	}
 	toggleSidebar();
 	$(window).resize(toggleSidebar);
-	
+
 	const DIV_CARD = 'div.card';
 	// ______________ Tooltip
 	$('[data-toggle="tooltip"]').tooltip();
-	
+
 	// ______________ Popover
 	$('[data-toggle="popover"]').popover({
 		html: true
 	});
-	
+
 	// ______________ Card Remove
 	$(document).on('click', '[data-toggle="card-remove"]', function(e) {
 		let $card = $(this).closest(DIV_CARD);
@@ -136,7 +136,7 @@
 		e.preventDefault();
 		return false;
 	});
-	
+
 	// ______________ Card Collapse
 	$(document).on('click', '[data-toggle="card-collapse"]', function(e) {
 		let $card = $(this).closest(DIV_CARD);
@@ -144,7 +144,7 @@
 		e.preventDefault();
 		return false;
 	});
-	
+
 	// ______________ Card Fullscreen
 	$(document).on('click', '[data-toggle="card-fullscreen"]', function(e) {
 		let $card = $(this).closest(DIV_CARD);
@@ -152,7 +152,7 @@
 		e.preventDefault();
 		return false;
 	});
-	
+
 	// sparkline1
 	$(".sparkline_bar").sparkline([2, 4, 3, 4, 5, 4, 5, 4, 3, 4], {
 		height: 20,
@@ -172,29 +172,29 @@
 		},
 		barColor: '#2d66f7'
 	});
-	
+
 	// ______________Skins
-	 
+
 	/*//////////////////// Horizontal skins  //////////////////////*/
-	
-	$('body').addClass("hor-skin1");  
-	
+
+	$('body').addClass("hor-skin1");
+
 	// $('body').addClass("hor-skin2"); //
-	
+
 	// $('body').addClass("hor-skin3"); //
-	
+
 	// $('body').addClass("menu1"); //
-	
+
 	// $('body').addClass("menu2"); //
-	 
+
 	/*//////////////////// Left-menu skins  //////////////////////*/
-	
-	$('body').addClass("side-skin1");  
-	
-	//$('body').addClass("side-skin2"); // 
-	
-	//$('body').addClass("side-skin3"); // 
-	
-	
+
+	$('body').addClass("side-skin1");
+
+	//$('body').addClass("side-skin2"); //
+
+	//$('body').addClass("side-skin3"); //
+
+
 })(jQuery);
 

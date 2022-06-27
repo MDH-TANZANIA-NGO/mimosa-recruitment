@@ -460,6 +460,28 @@ class CodeValuesTableSeeder extends Seeder
                     'sort' => 0,
                     'isactive' => 1,
                 ),
+            40 =>
+                array (
+                    'id' => 41,
+                    'code_id' => 10,
+                    'name' => 'Curriculum Vitae',
+                    'lang' => NULL,
+                    'description' => 'cv',
+                    'reference' => 'cv',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
+            41 =>
+                array (
+                    'id' => 42,
+                    'code_id' => 10,
+                    'name' => 'Cover Letter',
+                    'lang' => NULL,
+                    'description' => 'cl',
+                    'reference' => 'cl',
+                    'sort' => 0,
+                    'isactive' => 1,
+                ),
         ));
         $this->enableForeignKeys("code_values");
 

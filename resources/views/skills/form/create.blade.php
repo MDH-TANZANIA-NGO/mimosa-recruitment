@@ -18,21 +18,21 @@
                     <div class="col-md-3">
                         <div class="form-group ">
                             {!! Form::label('skill_category_id', __("Category"),['class'=>'form-label','required_asterik']) !!}
-                            {!! Form::select('skill_category_id', $categories, null, ['class' =>'form-control select2-show-search', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
+                            {!! Form::select('skill_category_id', $categories, null, ['class' =>'form-control select2-show-vacancy', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
                             {!! $errors->first('skill_category_id', '<span class="badge badge-danger">:message</span>') !!}
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group ">
                             {!! Form::label('skill_id', __("Skill"),['class'=>'form-label','required_asterik']) !!}
-                            {!! Form::select('skill_id', [], null, ['class' =>'form-control select2-show-search', 'data-placeholder' => __('label.select') , 'aria-describedby' => '','disabled', 'id' =>'skills']) !!}
+                            {!! Form::select('skill_id', [], null, ['class' =>'form-control select2-show-vacancy', 'data-placeholder' => __('label.select') , 'aria-describedby' => '','disabled', 'id' =>'skills']) !!}
                             {!! $errors->first('skill_id', '<span class="badge badge-danger">:message</span>') !!}
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="form-group ">
                             {!! Form::label('skill_level_cv_id', __("Skill Level"),['class'=>'form-label','required_asterik']) !!}
-                            {!! Form::select('skill_level_cv_id', $skill_levels, null, ['class' =>'form-control select2-show-search', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
+                            {!! Form::select('skill_level_cv_id', $skill_levels, null, ['class' =>'form-control select2-show-vacancy', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
                             {!! $errors->first('skill_level_cv_id', '<span class="badge badge-danger">:message</span>') !!}
                         </div>
                     </div>

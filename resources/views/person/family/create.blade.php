@@ -39,7 +39,7 @@
                     <div class="col-sm-6 col-md-4">
                         <div class="form-group">
                             {!! Form::label('relationship_cv_id', "Relation",['class'=>'form-label','required_asterik']) !!}
-                            {!! Form::select('relationship_cv_id', $relations, null, ['class' =>'form-control select2-show-search', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
+                            {!! Form::select('relationship_cv_id', $relations, null, ['class' =>'form-control select2-show-vacancy', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
                             {!! $errors->first('relationship_cv_id', '<span class="badge badge-danger">:message</span>') !!}
                         </div>
                     </div>

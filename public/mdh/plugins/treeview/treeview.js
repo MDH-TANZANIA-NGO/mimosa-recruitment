@@ -219,13 +219,13 @@ $(function() {
           enableLinks: true,
           data: defaultData
         });
-		
+
         var $searchableTree = $('#treeview-searchable').treeview({
           data: defaultData,
         });
 
         var search = function(e) {
-          var pattern = $('#input-search').val();
+          var pattern = $('#input-vacancy').val();
           var options = {
             ignoreCase: $('#chk-ignore-case').is(':checked'),
             exactMatch: $('#chk-exact-match').is(':checked'),
@@ -237,16 +237,16 @@ $(function() {
           $.each(results, function (index, result) {
             output += '<p>- ' + result.text + '</p>';
           });
-          $('#search-output').html(output);
+          $('#vacancy-output').html(output);
         }
 
-        $('#btn-search').on('click', search);
-        $('#input-search').on('keyup', search);
+        $('#btn-vacancy').on('click', search);
+        $('#input-vacancy').on('keyup', search);
 
-        $('#btn-clear-search').on('click', function (e) {
+        $('#btn-clear-vacancy').on('click', function (e) {
           $searchableTree.treeview('clearSearch');
-          $('#input-search').val('');
-          $('#search-output').html('');
+          $('#input-vacancy').val('');
+          $('#vacancy-output').html('');
         });
 
 
@@ -272,7 +272,7 @@ $(function() {
         $('#chk-select-multi:checkbox').on('change', function () {
           console.log('multi-select change');
           $selectableTree = initSelectableTree();
-          selectableNodes = findSelectableNodes();          
+          selectableNodes = findSelectableNodes();
         });
 
         // Select/unselect/toggle nodes
