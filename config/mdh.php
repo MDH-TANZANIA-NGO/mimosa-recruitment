@@ -22,4 +22,6 @@ return [
         'with_region' => 13,
     ],
 
+    'mimosa_url' => env('MIMOSA_URL',''),
+
 ];
