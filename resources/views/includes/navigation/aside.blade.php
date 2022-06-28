@@ -39,7 +39,7 @@
         </li>
 
         <li>
-            <a class="side-menu__item" href="{{ url('vacancies') }}"><i class="side-menu__icon fa fa-search"></i><span class="side-menu__label">My Applications</span></a>
+            <a class="side-menu__item" href="{{ route('application.index') }}"><i class="side-menu__icon fa fa-search"></i><span class="side-menu__label">My Applications</span></a>
         </li>
 
         <li>

@@ -19,7 +19,7 @@
                         Department: <span> {!! $_advertisement->description !!} </span>
                     </ul>
                     <div>
-                        {!! Form::open(['route' => 'vacancy.store', 'enctype'=>"multipart/form-data", 'method' => 'put',]) !!}
+                        {!! Form::open(['route' => 'application.store','enctype'=>"multipart/form-data", 'method' => 'post',]) !!}
                         <!-- Large Modal -->
                         <div class="col-lg-12 col-md-12">
                             <div class="card">
@@ -36,33 +36,28 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-6" >
-                                            <label class="form-label">Select Document Type</label>
-                                            <select name="document_type_cv_id" id="select-level" class="form-control custom-select">
-                                                <option value=""  disabled selected hidden>Select Level</option>
-                                                @foreach($documents as $document)
-                                                    <option value="{{ $document->id }}">{{$document->name}}</option>
-                                                @endforeach
-                                            </select>
-                                            @error('document_type_cv_id')
+                                            <label class="form-label">Upload Cover Letter</label>
+                                            <input type="file" class="form-control" name="cover_letter" placeholder="Enter the course you study" required></input>
+                                            @error('cover_letter')
                                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong> </span>
                                             @enderror
                                         </div>
 
-                                        <div class="col-md-6" >
-                                            <label class="form-label">Upload Certificate</label>
-                                            <input type="file" class="form-control" name="certificate" placeholder="Enter the course you study" required></input>
-                                            @error('certificate')
+                                        <div class="col-md-6">
+                                            <label class="form-label">Upload Curriculum Vitae</label>
+                                            <input type="file" class="form-control" name="cv" placeholder="Enter the course you study" required></input>
+                                            @error('cv')
                                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong> </span>
                                             @enderror
                                         </div>
+                                        <input type="text" name="adv_uuid" class="hidden" value="{{$_advertisement->uuid}}">
+                                        <input type="text" name="hire_requisition_job_id" class="hidden" value="{{$_advertisement->hire_requisition_job_id}}">
                                     </div>
                                     </div>
-                                    &nbsp;
 
                                     </div>
 
                                     </div>
-                                    &nbsp;
 
                                     <div class="row">
                                         <div class="col-12">
@@ -77,7 +72,4 @@
                         {!! Form::close() !!}
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 @endsection
