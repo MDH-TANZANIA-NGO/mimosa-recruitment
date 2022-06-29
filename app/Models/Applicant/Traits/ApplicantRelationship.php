@@ -10,4 +10,5 @@ trait ApplicantRelationship
     {
         return $this->belongsTo(User::class);
     }
+
 }
