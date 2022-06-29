@@ -63,7 +63,7 @@ class ApplicationController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
