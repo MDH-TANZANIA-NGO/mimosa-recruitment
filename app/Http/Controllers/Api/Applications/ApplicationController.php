@@ -14,9 +14,9 @@ class ApplicationController extends Controller
      *
      * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
-    public function index(Request $request)
+    public function index($hire_requisition_job_id)
     {
-        $applications = Application::where('hire_requisition_job_id', $request->get('hire_requisition_job_id'))->get();
+        $applications = Application::where('hire_requisition_job_id', $hire_requisition_job_id)->get();
         return  ApplicationResource::collection($applications);
     }
 

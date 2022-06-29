@@ -17,7 +17,7 @@ class VacancyController extends Controller
     }
 
     public function show($uuid){
-        $response = Http::get('http://mdherp.test/api/advertisement/'.$uuid.'/show');
+        $response = Http::get(config('mdh.mimosa_url').'advertisement/'.$uuid.'/show');
         $result = json_decode($response)->result->advertisement;
         //dd($result->hire_requisition_job_id);
         return view('vacancy.show')
