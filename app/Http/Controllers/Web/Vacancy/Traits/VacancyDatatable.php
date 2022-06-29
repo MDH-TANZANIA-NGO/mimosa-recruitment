@@ -7,7 +7,7 @@ use Yajra\DataTables\DataTables;
 trait VacancyDatatable
 {
     public function getJobLists(){
-        $response = Http::get('http://mdherp.test/api/advertisement');
+        $response = Http::get(config('mdh.mimosa_url').'advertisement');
         $result = json_decode($response);
         return DataTables::of($result->result->advertisements)
             ->addIndexColumn()
