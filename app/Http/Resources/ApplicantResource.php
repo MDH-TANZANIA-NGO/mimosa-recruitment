@@ -20,6 +20,7 @@ class ApplicantResource extends JsonResource
         $highest =  Education::where('user_id', $this->user_id)->max('education_level_cv_id');
         return [
             'id' => $this->id,
+            'uuid' => $this->uuid,
             'first_name' => $this->first_name,
             'middle_name' => $this->middle_name,
             'last_name' => $this->last_name,

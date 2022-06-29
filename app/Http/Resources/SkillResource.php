@@ -2,19 +2,21 @@
 
 namespace App\Http\Resources;
 
-use App\Models\Applicant\Applicant;
+use App\Models\Skill\SkillCategory;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ApplicationResource extends JsonResource
+class SkillResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return ApplicantResource
+     * @return array
      */
     public function toArray($request)
     {
-        return new ApplicantResource(Applicant::where('user_id', $this->user_id)->first());
+        return [
+            'skill_category' => SkillCategory::where('id', $this->skill_category_id)->pluck('name')
+        ];
     }
 }
