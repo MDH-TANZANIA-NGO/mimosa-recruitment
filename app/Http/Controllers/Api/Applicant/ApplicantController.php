@@ -25,7 +25,12 @@ class ApplicantController extends Controller
             'addresses.district',
             'addresses.type',
             'educations.level',
-            'experiences'
+            'experiences',
+            'referees.country',
+            'referees.region',
+            'referees.gender',
+            'referees.type',
+            'skills.skill.category'
             )->findOrFail($id);
     }
 
