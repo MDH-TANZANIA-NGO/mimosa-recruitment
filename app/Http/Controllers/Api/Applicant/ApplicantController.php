@@ -35,8 +35,8 @@ class ApplicantController extends Controller
             )->findOrFail($id);
     }
 
-    public function resource($id){
-        return new UserResource(User::find($id));
+    public function resource($id, $hire){
+        return new UserResource(User::find($id),$hire);
     }
 
 }

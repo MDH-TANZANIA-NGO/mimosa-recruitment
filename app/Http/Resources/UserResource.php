@@ -7,6 +7,15 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserResource extends JsonResource
 {
+
+    protected $hire_requisition_job_id;
+    public $resource;
+    public function __construct($resource, $hire_requisition_job_id)
+    {
+        $this->resource = $resource;
+       $this->hire_requisition_job_id = $hire_requisition_job_id;
+    }
+
     /**
      * Transform the resource into an array.
      *
@@ -16,21 +25,20 @@ class UserResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->id,
-            'email' => $this->email,
-            'email_verified_at' => $this->email_verified_at,
-            'uuid' => $this->uuid,
-            'applicant' => new ApplicantResource($this->applicant),
-            'educations' => EducationResource::collection($this->educations),
-            'addresses' => AddressResource::collection($this->addresses),
-            'experiences' => ExperienceResource::collection($this->experiences),
-            'referees' => ReferenceResource::collection($this->references),
-            'skills' => UserSkillResource::collection($this->skills),
-            'application' => ApplicationResource::collection($this->applications)
-//            'applications' => new ApplicationResource(
-//                Application::where('user_id', $this->id)
-//                        ->where('hire_requisition_job_id', $request->input('hire_requisition_job_id'))->first()
-//            )
+            'id' => $this->resource->id,
+            'email' => $this->resource->email,
+            'email_verified_at' => $this->resource->email_verified_at,
+            'uuid' => $this->resource->uuid,
+            'applicant' => new ApplicantResource($this->resource->applicant),
+            'educations' => EducationResource::collection($this->resource->educations),
+            'addresses' => AddressResource::collection($this->resource->addresses),
+            'experiences' => ExperienceResource::collection($this->resource->experiences),
+            'referees' => ReferenceResource::collection($this->resource->references),
+            'skills' => UserSkillResource::collection($this->resource->skills),
+            'applications' => new ApplicationResource(
+                Application::where('user_id', $this->resource->id)
+                        ->where('hire_requisition_job_id', $this->hire_requisition_job_id)->first()
+            )
         ];
     }
 }
