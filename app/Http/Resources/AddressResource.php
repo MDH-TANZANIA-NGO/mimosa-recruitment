@@ -20,9 +20,9 @@ class AddressResource extends JsonResource
         return [
             'area_name' => $this->area_name,
             'house_number' => $this->house_number,
-            'address_type' => CodeValue::where('id',$this->address_type_cv_id)->pluck('name'),
-            'district' => District::where('id', $this->district_id)->pluck('name'),
-            'region' => Region::where('id', $this->region_id)->pluck('name')
+            'address_type' => CodeValue::where('id',$this->address_type_cv_id)->first()->name,
+            'district' => District::where('id', $this->district_id)->first()->name,
+            'region' => Region::where('id', $this->region_id)->first()->name
         ];
     }
 }
