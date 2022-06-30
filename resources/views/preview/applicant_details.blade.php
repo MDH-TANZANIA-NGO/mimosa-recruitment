@@ -17,7 +17,7 @@
                                 <span style="margin-right: 10px"><b>DOB:</b> {{ $personal_info->dob }}</span>
                                 <span style="margin-right: 10px"><b>EMAIL:</b> {{ $applicant->email }}</span>
                                 <span style="margin-right: 10px"><b>MOBILE NUMBER:</b> {{ $personal_info->phone }}</span>
-                                <span style="margin-right: 10px"><b>NATIONAL ID NO:</b> {{ $applicant->national }}</span>
+                                <span style="margin-right: 10px"><b>NATIONAL ID NO:</b> {{ $personal_info->national_id }}</span>
                                 <span style="margin-right: 10px"><b>COUNTRY:</b> {{ $personal_info->country->name }}</span>
                             </td>
                         </tr>
@@ -45,7 +45,7 @@
                                             <td style="width: 10%;">{{ $education->start_year }}</td>
                                             <td>{{ $education->end_year }}</td>
                                             <td>{{ $education->still_studying ? 'Completed' : 'still studying' }}</td>
-                                            <td><a href="{{ $education->certificate}}">View</a></td>
+                                            <td><a href="{{ $education->getFirstMediaUrl('certificates')}}">View</a></td>
                                         </tr>
                                     @endforeach
                                     </tbody>
@@ -68,6 +68,7 @@
                                     </thead>
                                     <tbody>
                                     @foreach($addresses AS $key => $address)
+                                        {{$address[$key]}}
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $address->address_type }}</td>

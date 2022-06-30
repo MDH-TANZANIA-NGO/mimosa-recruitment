@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web\Applicant;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\EducationResource;
+use App\Http\Resources\UserDetailResource;
 use App\Http\Resources\UserResource;
 use App\Models\Applicant\Applicant;
 use App\Models\Auth\User;
@@ -103,9 +104,8 @@ class ApplicantController extends Controller
     }
 
     public function preview(){
-       //return new UserResource(access()->user(), null);
-        $applicant =   new UserResource(access()->user(), null);
-
+        $applicant =   new UserDetailResource(access()->user());
+        //return $applicant;
         return view('preview.applicant_details')
             ->with('applicant', $applicant)
             ->with('personal_info', $applicant->applicant)
