@@ -6,19 +6,15 @@ use App\Models\Address\Address;
 use App\Models\Applicant\Applicant;
 use App\Models\Auth\Role;
 use App\Models\Auth\Permission;
-use App\Models\Auth\SupervisorUser;
 use App\Models\Education\Education;
 use App\Models\Experience\Experience;
-use App\Models\Project\Project;
-use App\Models\Project\SubProgram;
+use App\Models\Reference\Reference;
+use App\Models\Skill\Skill;
+use App\Models\Skill\SkillCategory;
+use App\Models\Skill\UserSkill;
 use App\Models\System\CodeValue;
 use App\Models\System\Region;
-use App\Models\Taf\Taf;
-use App\Models\Timesheet\Timesheet;
-use App\Models\Token\UserLoginToken;
 use App\Models\Unit\Designation;
-use App\Models\Workflow\WfDefinition;
-use App\Models\Workflow\WfTrack;
 
 
 trait UserRelationship
@@ -79,6 +75,16 @@ trait UserRelationship
     public function experiences()
     {
         return $this->hasMany(Experience::class);
+    }
+
+    public function referees()
+    {
+        return $this->hasMany(Reference::class);
+    }
+
+    public function skills()
+    {
+        return $this->HasMany(UserSkill::class);
     }
 
 }
