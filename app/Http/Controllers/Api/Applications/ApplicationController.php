@@ -18,6 +18,8 @@ class ApplicationController extends Controller
      */
     public function index($hire_requisition_job_id)
     {
+        //  $applications = Application::where('hire_requisition_job_id', $hire_requisition_job_id)->get();
+        //  return  ApplicationResource::collection($applications);
         return User::query()->select([
             DB::raw('users.id AS id'),
             DB::raw('applicants.first_name AS first_name'),

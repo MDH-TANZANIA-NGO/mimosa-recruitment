@@ -7,19 +7,19 @@
             <img src="{{ asset('mdh/images/brand/logo.png') }}" class="header-brand-img mobile-logo" alt="MDH logo">
             <img src="{{ asset('mdh/images/brand/logo.png') }}" class="header-brand-img darkmobile-logo" alt="MDH logo">
             </a>
-            <div class="dropdown   side-nav" >
+            {{--<div class="dropdown   side-nav" >
                 <a aria-label="Hide Sidebar" class="app-sidebar__toggle nav-link icon mt-1" data-toggle="sidebar" href="#">
                     <i class="fe fe-align-left"></i>
                 </a><!-- sidebar-toggle-->
-            </div>
+            </div>--}}
 
 
             <div class="d-flex order-lg-2 ml-auto">
-                <div class="dropdown   header-fullscreen" >
+                {{--<div class="dropdown   header-fullscreen" >
                     <a  class="nav-link icon full-screen-link"  id="fullscreen-button">
                         <i class="fe fe-minimize"></i>
                     </a>
-                </div>
+                </div>--}}
 
                 <div class="dropdown ">
                     <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">

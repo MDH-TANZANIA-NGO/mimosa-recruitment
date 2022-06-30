@@ -14,21 +14,21 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group ">
-                        {!! Form::label('language1', __("Language1"),['class'=>'form-label','required_asterik']) !!}
+                        {!! Form::label('language1', __("First Language"),['class'=>'form-label','required_asterik']) !!}
                         {!! Form::select('language1', $languages, null, ['class' =>'form-control select2 custom-select', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
                         {!! $errors->first('language1', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group ">
-                        {!! Form::label('language2', __("Language1"),['class'=>'form-label','required_asterik']) !!}
+                        {!! Form::label('language2', __("Second Language"),['class'=>'form-label','required_asterik']) !!}
                         {!! Form::select('language2', $languages, null, ['class' =>'form-control select2 custom-select', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
                         {!! $errors->first('language2', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group ">
-                        {!! Form::label('language3', __("Language3"),['class'=>'form-label','required_asterik']) !!}
+                        {!! Form::label('language3', __("Third Language (Optional)"),['class'=>'form-label','required_asterik']) !!}
                         {!! Form::select('language3', $languages, null, ['class' =>'form-control select2 custom-select', 'placeholder' => __('label.select') , 'aria-describedby' => '']) !!}
                         {!! $errors->first('language3', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group ">
-                        {!! Form::label('language4', __("Language4"),['class'=>'form-label','required_asterik']) !!}
+                        {!! Form::label('language4', __("Fourth Language (Optional)"),['class'=>'form-label','required_asterik']) !!}
                         {!! Form::select('language4', $languages, null, ['class' =>'form-control select2 custom-select', 'placeholder' => __('label.select') , 'aria-describedby' => '']) !!}
                         {!! $errors->first('language4', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
