@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\Applicant;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
 use App\Models\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -14,7 +15,7 @@ class ApplicantController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model|\Illuminate\Http\Response
      */
     public function show($id)
     {
@@ -32,6 +33,10 @@ class ApplicantController extends Controller
             'referees.type',
             'skills.skill.category'
             )->findOrFail($id);
+    }
+
+    public function resource($id, $hire){
+        return new UserResource(User::find($id),$hire);
     }
 
 }

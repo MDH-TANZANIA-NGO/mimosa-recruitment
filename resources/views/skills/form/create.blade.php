@@ -42,7 +42,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             {!! Form::label('remarks', __("Remarks"),['class'=>'form-label','required_asterik']) !!}
-                            {!! Form::textArea('remarks',null, ['class' => 'form-control','rows' => 3, 'placeholder' => 'ie. 0712311311','required']) !!}
+                            {!! Form::textArea('remarks',null, ['class' => 'form-control','rows' => 3, 'placeholder' => '','required']) !!}
                             {!! $errors->first('remarks', '<span class="badge badge-danger">:message</span>') !!}
                         </div>
                     </div>

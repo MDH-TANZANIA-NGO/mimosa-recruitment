@@ -3,6 +3,7 @@
     @include('address.form.create')
 
     @include('address.datatable.index')
+    <a href="{{route('otherInfo.index')}}">Next</a>
 @endsection
 
 @push('after-scripts')

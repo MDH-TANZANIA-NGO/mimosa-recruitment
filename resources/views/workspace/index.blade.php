@@ -1,55 +1,41 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="progress-bar progress-bar-striped progress-bar-animated bg-green" style="width: 10%">40%</div>
+{{--    <div class="progress-bar progress-bar-striped progress-bar-animated bg-green" style="width: 10%">40%</div>--}}
     <br>
 
     <div class="row">
-        <div class="col-4 col-sm-4 col-lg-3">
-            <a href="{{route('address.index')}}">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <div class="h2 m-0"><i class="mdi mdi-account-card-details multiple-outline text-primary"></i></div>
-                        <div class="text-muted mb-0">Personal Details</div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">MDH Recruitment Portal</h3>
+                <div class="card-options ">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <span class=" mb-1">Hi {{ \Illuminate\Support\Facades\Auth::user()->email }}, Welcome to MDH Recruitment Portal</span>
+                        <hr>
+{{--                        <h3 class="mb-3">About MDH</h3>--}}
+                        <p class="mb-0 fs-12">
+                            MDH is an indigenous-Tanzanian non-Governmental
+                            Organisation with   principal place of business in Tanzania. MDH's central office is located at  Mikocheni B, along Mwai Kibaki road in Dar es Salaam.</p>
+                        <hr>
+                        {{--                        <h3 class="mb-3">About MDH</h3>--}}
+                        <p class="mb-0 fs-12">
+                            MDH’s work is primarily in public health service and research in Tanzania and the world at large. MDH seeks to mobilize and engage a team of skilled, experienced and motivated Tanzanian professionals to work in collaboration with the government and  with other local and international experts to address public health priorities through evidence based interventions.
+
+                    </div>
+                    <div class="col-md-4 mt-4 mt-sm-0">
+                        <div class="chart-circle overflow-hiddene  mt-sm-0 mb-0 text-left" data-value="0.75" data-thickness="8" data-color="#2d66f7"><canvas width="256" height="256" style="height: 128px; width: 128px;"></canvas>
+                            <div class="chart-circle-value text-center "><h1 class="mb-0">75%</h1><small>Your Account Details</small></div>
+                        </div>
                     </div>
                 </div>
-            </a>
-
+            </div>
         </div>
 
-        <div class="col-4 col-sm-4 col-lg-3">
-            <a href="{{route('education.index')}}">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <div class="h2 m-0"><i class="zmdi zmdi-graduation-cap multiple-outline text-primary"></i></div>
-                        <div class="text-muted mb-0">Education</div>
-                    </div>
-                </div>
-            </a>
-
-        </div>
-        <div class="col-4 col-sm-4 col-lg-3">
-            <a href="{{route('experience.index')}}">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <div class="h2 m-0"><i class="mdi mdi-account-network multiple-outline text-primary"></i></div>
-                        <div class="text-muted mb-0">Working experience</div>
-                    </div>
-                </div>
-            </a>
-
-        </div>
-
-        <div class="col-4 col-sm-4 col-lg-3">
-            <a href="#">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <div class="h2 m-0"><i class="mdi mdi-attachment multiple-outline text-primary"></i></div>
-                        <div class="text-muted mb-0">Attachments</div>
-                    </div>
-                </div>
-            </a>
-
-        </div>
     </div>
 @endsection

@@ -14,7 +14,7 @@ class ApplicationController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index($hire_requisition_job_id)
     {
@@ -63,7 +63,7 @@ class ApplicationController extends Controller
      */
     public function show($id)
     {
-        
+
     }
 
     /**

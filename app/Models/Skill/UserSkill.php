@@ -2,6 +2,7 @@
 
 namespace App\Models\Skill;
 
+use App\Models\Auth\User;
 use App\Models\BaseModel;
 use App\Models\Skill\Skill;
 

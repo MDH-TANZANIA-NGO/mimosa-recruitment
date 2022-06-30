@@ -4,10 +4,13 @@ namespace App\Models\Auth\Relationship;
 
 use App\Models\Address\Address;
 use App\Models\Applicant\Applicant;
+use App\Models\Application\Application;
 use App\Models\Auth\Role;
 use App\Models\Auth\Permission;
 use App\Models\Education\Education;
 use App\Models\Experience\Experience;
+use App\Models\Project\Project;
+use App\Models\Project\SubProgram;
 use App\Models\Reference\Reference;
 use App\Models\Skill\Skill;
 use App\Models\Skill\SkillCategory;
@@ -77,14 +80,16 @@ trait UserRelationship
         return $this->hasMany(Experience::class);
     }
 
-    public function referees()
-    {
+    public function references(){
         return $this->hasMany(Reference::class);
     }
 
-    public function skills()
-    {
-        return $this->HasMany(UserSkill::class);
+    public function skills(){
+        return $this->hasMany(UserSkill::class);
+    }
+
+    public function applications(){
+        return $this->hasMany(Application::class);
     }
 
 }

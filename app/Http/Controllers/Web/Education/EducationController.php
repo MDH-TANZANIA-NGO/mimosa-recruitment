@@ -65,6 +65,7 @@ class EducationController extends Controller
      */
     public function show(Education $education)
     {
+        //dd($education);
         return view('education.show')
             ->with('educations', code_value()->query()->where('code_id',5)->pluck('name','id'))
             ->with('education', $education);
@@ -90,6 +91,7 @@ class EducationController extends Controller
      */
     public function update(Request $request, Education $education)
     {
+        dd($request->all());
         $request->validate([
             'certificate' => ['nullable', 'file'],
         ]);

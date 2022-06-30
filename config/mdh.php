@@ -23,5 +23,6 @@ return [
     ],
 
     'mimosa_url' => env('MIMOSA_URL',''),
+    'mimosa_rec_url' => env('MIMOSA_REC_URL',''),
 
 ];

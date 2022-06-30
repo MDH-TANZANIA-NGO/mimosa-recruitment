@@ -2,7 +2,6 @@
 
 namespace App\Http\Resources;
 
-use App\Models\Applicant\Applicant;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ApplicationResource extends JsonResource
@@ -11,13 +10,16 @@ class ApplicationResource extends JsonResource
      * Transform the resource into an array.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return ApplicantResource
+     * @return array
      */
     public function toArray($request)
     {
-//        return [
-//             new ApplicantResource(Applicant::where('user_id', $this->user_id)->first()),
-//        ];
-        return new ApplicantResource(Applicant::where('user_id', $this->user_id)->first());
+        return [
+            'id' => $this->id,
+            'hire_requisition_job_id' => $this->hire_requisition_job_id,
+            'status' => $this->status,
+            'cv' => config('mdh.mimosa_rec_url').$this->getFirstMediaUrl('cv'),
+            'cover_letters' => config('mdh.mimosa_rec_url').$this->getFirstMediaUrl('cover_letters')
+        ];
     }
 }
