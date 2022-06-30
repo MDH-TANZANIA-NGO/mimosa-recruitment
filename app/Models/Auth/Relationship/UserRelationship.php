@@ -2,11 +2,17 @@
 
 namespace App\Models\Auth\Relationship;
 
+use App\Models\Address\Address;
+use App\Models\Applicant\Applicant;
 use App\Models\Auth\Role;
 use App\Models\Auth\Permission;
 use App\Models\Auth\SupervisorUser;
+use App\Models\Education\Education;
+use App\Models\Experience\Experience;
 use App\Models\Project\Project;
 use App\Models\Project\SubProgram;
+use App\Models\Reference\Reference;
+use App\Models\Skill\UserSkill;
 use App\Models\System\CodeValue;
 use App\Models\System\Region;
 use App\Models\Taf\Taf;
@@ -51,55 +57,37 @@ trait UserRelationship
     {
         return $this->hasMany('user_logs','user_id','id');
     }
-    public function timesheets()
-    {
-        return $this->hasMany(Timesheet::class);
-    }
-
-    /**
-     * @return mixed
-     */
-    public function wfTracks()
-    {
-        //return $this->hasMany(WfTrack::class);
-        return $this->morphMany(WfTrack::class, 'user','id');
-    }
-
-    /**
-     * @return mixed
-     */
-    public function wfTracksUser()
-    {
-        //return $this->hasMany(WfTrack::class);
-        return $this->hasMany(WfTrack::class);
-    }
-
-    public function wfDefinitions()
-    {
-        return $this->belongsToMany(WfDefinition::class, 'user_wf_definition');
-    }
 
     public function designation()
     {
         return $this->belongsTo(Designation::class);
     }
 
-    public function assignedSupervisor()
+    public function applicant()
     {
-        return $this->hasOne(SupervisorUser::class,'user_id','id')->first();
+        return $this->hasOne(Applicant::class);
     }
 
-    public function projects()
+    public function addresses()
     {
-        return $this->belongsToMany(Project::class)->withTimestamps();
+        return $this->hasMany(Address::class);
     }
 
-    public function subProgram()
+    public function educations()
     {
-        return $this->belongsToMany(SubProgram::class, 'sub_program_user');
+        return $this->hasMany(Education::class);
     }
-    public function loginToken()
+
+    public function experiences()
     {
-        return $this->hasOne(UserLoginToken::class, 'user_id', 'id');
+        return $this->hasMany(Experience::class);
+    }
+
+    public function references(){
+        return $this->hasMany(Reference::class);
+    }
+
+    public function skills(){
+        return $this->hasMany(UserSkill::class);
     }
 }

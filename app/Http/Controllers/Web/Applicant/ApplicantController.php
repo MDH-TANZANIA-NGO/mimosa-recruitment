@@ -49,7 +49,7 @@ class ApplicantController extends Controller
         $request->merge(["user_id"=>access()->id()]);
         Applicant::create($request->all());
         alert()->success('Personal Information has been added Successfully!', 'success');
-        return redirect()->back();
+        return redirect()->route('address.index');
     }
 
     /**

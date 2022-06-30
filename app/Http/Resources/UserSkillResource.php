@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Skill\Skill;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserSkillResource extends JsonResource
@@ -15,7 +16,8 @@ class UserSkillResource extends JsonResource
     public function toArray($request)
     {
         return [
-            ''
+            'id' => $this->id,
+            //'skill' => Skill::
         ];
     }
 }

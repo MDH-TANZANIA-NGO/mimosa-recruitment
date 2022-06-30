@@ -19,17 +19,7 @@ class ApplicantResource extends JsonResource
     {
         $highest =  Education::where('user_id', $this->user_id)->max('education_level_cv_id');
         return [
-            'id' => $this->id,
-            'uuid' => $this->uuid,
-            'first_name' => $this->first_name,
-            'middle_name' => $this->middle_name,
-            'last_name' => $this->last_name,
-            'dob' => $this->dob,
-            'phone' => $this->phone,
-            'country' => Country::where('id',$this->country_id)->pluck('name'),
-            'gender' => CodeValue::where('id',$this->gender_cv_id)->pluck('name'),
-            'national' => $this->national_id,
-            'education' => new EducationResource(Education::where('education_level_cv_id',$highest)->first())
+
         ];
     }
 }
