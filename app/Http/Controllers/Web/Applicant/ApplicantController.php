@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Web\Applicant;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\EducationResource;
+use App\Http\Resources\UserResource;
 use App\Models\Applicant\Applicant;
+use App\Models\Auth\User;
 use App\Models\System\Country;
 use Illuminate\Http\Request;
 
@@ -97,5 +100,19 @@ class ApplicantController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function preview(){
+       //return new UserResource(access()->user(), null);
+        $applicant =   new UserResource(access()->user(), null);
+
+        return view('preview.applicant_details')
+            ->with('applicant', $applicant)
+            ->with('personal_info', $applicant->applicant)
+            ->with('educations', $applicant->educations)
+            ->with('addresses', $applicant->addresses)
+            ->with('experiences', $applicant->experiences)
+            ->with('skills', $applicant->skills);
+            //->with('referees', $applicant->referees);
     }
 }

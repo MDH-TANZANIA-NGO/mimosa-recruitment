@@ -43,7 +43,7 @@
         </li>
 
         <li>
-            <a class="side-menu__item" href="{{ url('vacancies') }}"><i class="side-menu__icon fa fa-search"></i><span class="side-menu__label">Preview Profile</span></a>
+            <a class="side-menu__item" href="{{ route('applicant.preview') }}"><i class="side-menu__icon fa fa-search"></i><span class="side-menu__label">Preview Profile</span></a>
         </li>
     </ul>
 </aside>
