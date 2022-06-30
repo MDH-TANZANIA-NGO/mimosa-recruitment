@@ -9,4 +9,5 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 class Application extends BaseModel implements HasMedia
 {
     use InteractsWithMedia;
+    protected $table = "applications";
 }

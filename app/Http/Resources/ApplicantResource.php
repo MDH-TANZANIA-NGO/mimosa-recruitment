@@ -30,7 +30,7 @@ class ApplicantResource extends JsonResource
             'country' => Country::where('id',$this->country_id)->first()->name,
             'gender' => CodeValue::where('id',$this->gender_cv_id)->first()->name,
             'national' => $this->national_id,
-            'educations' => new EducationResource(Education::where('education_level_cv_id',$highest)->first()),
+            'highest_education' => Education::where('education_level_cv_id',$highest)->first()->award_received,
 
         ];
     }

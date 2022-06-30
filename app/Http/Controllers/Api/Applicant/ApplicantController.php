@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\Applicant;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
 use App\Models\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -32,6 +33,10 @@ class ApplicantController extends Controller
             'referees.type',
             'skills.skill.category'
             )->findOrFail($id);
+    }
+
+    public function resource($id){
+        return new UserResource(User::find($id));
     }
 
 }

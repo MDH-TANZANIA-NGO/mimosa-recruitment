@@ -4,6 +4,7 @@ namespace App\Models\Auth\Relationship;
 
 use App\Models\Address\Address;
 use App\Models\Applicant\Applicant;
+use App\Models\Application\Application;
 use App\Models\Auth\Role;
 use App\Models\Auth\Permission;
 use App\Models\Education\Education;
@@ -86,9 +87,9 @@ trait UserRelationship
     public function skills(){
         return $this->hasMany(UserSkill::class);
     }
-    public function referees()
-    {
-        return $this->hasMany(Reference::class);
+
+    public function applications(){
+        return $this->hasMany(Application::class);
     }
-    
+
 }
