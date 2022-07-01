@@ -91,7 +91,6 @@ class EducationController extends Controller
      */
     public function update(Request $request, Education $education)
     {
-        dd($request->all());
         $request->validate([
             'certificate' => ['nullable', 'file'],
         ]);

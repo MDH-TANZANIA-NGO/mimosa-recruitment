@@ -133,5 +133,6 @@
                 </div>
             </div>
         </div>
+        <a href="{{route('experience.index')}}" class="btn btn-azure">Next</a>
     </div>
 @endsection

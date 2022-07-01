@@ -142,6 +142,7 @@
                 </div>
             </div>
         </div>
+        <a href="{{route('vacancy.index')}}" class="btn btn-azure">Next</a>
     </div>
 @endsection
 

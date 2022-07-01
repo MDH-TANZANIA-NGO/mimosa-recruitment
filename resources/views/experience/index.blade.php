@@ -155,9 +155,7 @@
 
             <div class="card-body">
                 <div class="row">
-
                     <div class="col-12" >
-
                         <div class="table-responsive">
                             @include('experience.datatables.all')
                         </div>
@@ -165,6 +163,7 @@
                 </div>
             </div>
         </div>
+        <a href="{{route('reference.index')}}" class="btn btn-azure">Next</a>
     </div>
 @endsection
 

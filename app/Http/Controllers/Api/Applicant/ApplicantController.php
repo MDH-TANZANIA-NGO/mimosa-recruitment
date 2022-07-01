@@ -39,4 +39,8 @@ class ApplicantController extends Controller
         return new UserResource(User::find($id),$hire);
     }
 
+    public function updateApplicant(Request $request){
+
+    }
+
 }

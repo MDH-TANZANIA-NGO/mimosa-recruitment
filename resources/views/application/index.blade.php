@@ -5,7 +5,7 @@
         <div class="card">
             <div class="card-header" style="background-color: rgb(238, 241, 248)">
                 <div class="row text-center">
-                    <span class="col-12 text-center font-weight-bold">List of Practical Experiences</span>
+                    <span class="col-12 text-center font-weight-bold">My Applications</span>
                 </div>
                 <div class="card-options ">
                     <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>

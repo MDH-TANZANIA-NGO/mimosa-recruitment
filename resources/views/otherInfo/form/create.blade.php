@@ -1,4 +1,4 @@
-{!! Form::open(['route' => 'otherInfo.store', 'method' => 'post',]) !!}
+{!! Form::open(['route' => 'other.store', 'method' => 'post',]) !!}
 <!-- Large Modal -->
 <div class="col-lg-12 col-md-12">
     <div class="card">

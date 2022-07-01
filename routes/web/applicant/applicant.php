@@ -7,4 +7,5 @@ Route::group(['namespace' => 'Applicant', 'middleware' => ['web', 'auth'], 'pref
     Route::post('store', 'ApplicantController@store')->name('store');
     Route::put('{applicant}/update', 'ApplicantController@update')->name('update');
     Route::get('preview', 'ApplicantController@preview')->name('preview');
+
 });

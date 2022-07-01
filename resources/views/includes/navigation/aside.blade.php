@@ -15,7 +15,7 @@
         </li>
 
         <li>
-            <a class="side-menu__item" href="{{ route('otherInfo.index') }}"><i class="side-menu__icon fa fa-file"></i><span class="side-menu__label">Other Information</span></a>
+            <a class="side-menu__item" href="{{ route('other.index') }}"><i class="side-menu__icon fa fa-file"></i><span class="side-menu__label">Other Information</span></a>
         </li>
 
         <li>

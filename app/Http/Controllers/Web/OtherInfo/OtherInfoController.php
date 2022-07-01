@@ -15,9 +15,9 @@ class OtherInfoController extends Controller
      */
     public function index()
     {
-        $otherInfo = Other::where('user_id', access()->id())->first();
+        $other = Other::where('user_id', access()->id())->first();
         return view('otherInfo.index')
-            ->with('otherInfo', $otherInfo)
+            ->with('other', $other)
             ->with('languages', code_value()->query()->where('code_id',6)->pluck('name','id'));
     }
 
@@ -41,7 +41,8 @@ class OtherInfoController extends Controller
     {
         $request->merge(["user_id"=>access()->id()]);
         Other::create($request->all());
-        return redirect()->back();
+        alert()->success('Your Information has been added successfully','success');
+        return redirect()->route('skills.index');
     }
 
     /**
@@ -71,11 +72,14 @@ class OtherInfoController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Other $other)
     {
-        //
+        //dd($request->all());
+        $other->update($request->all());
+        alert()->success('Your Information has been updated successfully','success');
+        return redirect()->back();
     }
 
     /**

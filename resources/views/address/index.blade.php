@@ -3,7 +3,7 @@
     @include('address.form.create')
 
     @include('address.datatable.index')
-    <a href="{{route('otherInfo.index')}}">Next</a>
+    <a href="{{route('other.index')}}" class="btn btn-azure">Next</a>
 @endsection
 
 @push('after-scripts')

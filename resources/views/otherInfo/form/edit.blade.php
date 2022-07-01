@@ -1,4 +1,4 @@
-{!! Form::open(['route' => 'otherInfo.store', 'method' => 'post',]) !!}
+{!! Form::open(['route' => ['other.update', $other], 'method' => 'put']) !!}
 <!-- Large Modal -->
 <div class="col-lg-12 col-md-12">
     <div class="card">
@@ -15,21 +15,21 @@
                 <div class="col-md-4">
                     <div class="form-group ">
                         {!! Form::label('language1', __("Language1"),['class'=>'form-label','required_asterik']) !!}
-                        {!! Form::select('language1', $languages, $otherInfo->language1, ['class' =>'form-control select2 custom-select', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
+                        {!! Form::select('language1', $languages, $other->language1, ['class' =>'form-control select2 custom-select', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
                         {!! $errors->first('language1', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group ">
                         {!! Form::label('language2', __("Language2"),['class'=>'form-label','required_asterik']) !!}
-                        {!! Form::select('language2', $languages, $otherInfo->language2, ['class' =>'form-control select2 custom-select', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
+                        {!! Form::select('language2', $languages, $other->language2, ['class' =>'form-control select2 custom-select', 'placeholder' => __('label.select') , 'aria-describedby' => '', 'required']) !!}
                         {!! $errors->first('language2', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group ">
                         {!! Form::label('language3', __("Language3"),['class'=>'form-label','required_asterik']) !!}
-                        {!! Form::select('language3', $languages, $otherInfo->language3, ['class' =>'form-control select2 custom-select', 'placeholder' => __('label.select') , 'aria-describedby' => '']) !!}
+                        {!! Form::select('language3', $languages, $other->language3, ['class' =>'form-control select2 custom-select', 'placeholder' => __('label.select') , 'aria-describedby' => '']) !!}
                         {!! $errors->first('language3', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
                 </div>
@@ -39,14 +39,14 @@
                 <div class="col-md-4">
                     <div class="form-group ">
                         {!! Form::label('language4', __("Language4"),['class'=>'form-label','required_asterik']) !!}
-                        {!! Form::select('language4', $languages, $otherInfo->language4, ['class' =>'form-control select2 custom-select', 'placeholder' => __('label.select') , 'aria-describedby' => '']) !!}
+                        {!! Form::select('language4', $languages, $other->language4, ['class' =>'form-control select2 custom-select', 'placeholder' => __('label.select') , 'aria-describedby' => '']) !!}
                         {!! $errors->first('language4', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         {!! Form::label('current_salary', __("Current Salary"),['class'=>'form-label','required_asterik']) !!}
-                        {!! Form::text('current_salary',$otherInfo->current_salary,['class' => 'form-control', 'placeholder' => 'Please Enter your current salary']) !!}
+                        {!! Form::text('current_salary',$other->current_salary,['class' => 'form-control', 'placeholder' => 'Please Enter your current salary']) !!}
                         {!! $errors->first('current_salary', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         {!! Form::label('current_benefits', __("Current Benefits"),['class'=>'form-label','required_asterik']) !!}
-                        {!! Form::textArea('current_benefits',$otherInfo->current_benefits,['class' => 'form-control', 'rows' => 3, 'placeholder' => 'Please Enter your current salary']) !!}
+                        {!! Form::textArea('current_benefits',$other->current_benefits,['class' => 'form-control', 'rows' => 3, 'placeholder' => 'Please Enter your current salary']) !!}
                         {!! $errors->first('current_benefits', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label class="custom-switch">
-                            <input type="checkbox" name="relocation" {{ $otherInfo->relocation ? 'checked' : ''}} class="custom-switch-input">
+                            <input type="checkbox" name="relocation" {{ $other->relocation ? 'checked' : ''}} class="custom-switch-input">
                             <span class="custom-switch-indicator"></span>
                             <span class="custom-switch-description">Willing to relocate</span>
                         </label>
@@ -74,7 +74,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label class="custom-switch">
-                            <input type="checkbox" name="travel"  {{ $otherInfo->travel ? 'checked' : ''}} class="custom-switch-input">
+                            <input type="checkbox" name="travel"  {{ $other->travel ? 'checked' : ''}} class="custom-switch-input">
                             <span class="custom-switch-indicator"></span>
                             <span class="custom-switch-description">Willing to travel</span>
                         </label>
@@ -84,7 +84,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         {!! Form::label('availability', __("Availability in Days"),['class'=>'form-label','required_asterik']) !!}
-                        {!! Form::text('availability',$otherInfo->availability,['class' => 'form-control', 'placeholder' => 'Availability in Days']) !!}
+                        {!! Form::text('availability',$other->availability,['class' => 'form-control', 'placeholder' => 'Availability in Days']) !!}
                         {!! $errors->first('availability', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                 <div class="col-12">
                     <div class="form-group">
                         {!! Form::label('professional_membership', __("Professional Membership"),['class'=>'form-label','required_asterik']) !!}
-                        {!! Form::textArea('professional_membership',$otherInfo->professional_membership,['class' => 'form-control', 'rows' => 4, 'placeholder' => 'Professional Membership (Include membership number if any)']) !!}
+                        {!! Form::textArea('professional_membership',$other->professional_membership,['class' => 'form-control', 'rows' => 4, 'placeholder' => 'Professional Membership (Include membership number if any)']) !!}
                         {!! $errors->first('professional_membership', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
                 </div>

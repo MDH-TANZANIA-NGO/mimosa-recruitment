@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @if($otherInfo)
+    @if($other)
         @include('otherInfo.form.edit')
     @else
         @include('otherInfo.form.create')
