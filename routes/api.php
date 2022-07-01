@@ -7,7 +7,8 @@ Route::get('applications/{hire_requisition_job_id}/applicants', 'Api\Application
 
 Route::get('applicant/{id}/show', 'Api\Applicant\ApplicantController@show')->name('show');
 Route::get('applicant/{id}/resource/{hire_requisition_job_id}', 'Api\Applicant\ApplicantController@resource')->name('resource');
-Route::post('applicant/update', 'Api\Applicant\ApplicantController@updateApplicant')->name('applicant_update');
+Route::post('applicant/shortlisted', 'Api\Applicant\ApplicantController@shortlistApplicant')->name('applicant_shortlist');
+Route::post('applicant/unshortlist', 'Api\Applicant\ApplicantController@unshortlistApplicant')->name('applicant_unshortlist');
 
 
 Route::group(['namespace' => 'Api', 'middleware' => ['api', ''], 'prefix' => 'applications', 'as' => 'application.'], function () {

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\Applicant;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
+use App\Models\Application\Application;
 use App\Models\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -39,8 +40,26 @@ class ApplicantController extends Controller
         return new UserResource(User::find($id),$hire);
     }
 
-    public function updateApplicant(Request $request){
+    public function shortlistApplicant(Request $request){
+        //dd($request->get('id'));
+        $application = Application::where('user_id', $request->get('id'))
+            ->where('hire_requisition_job_id', $request->get('hr_hire_requisitions_job_id'))->first();
 
+        $application->update([
+            'status' => $request->get('status')
+        ]);
+        return response()->json(['data' => "Successful"], 200);
+    }
+
+    public function unshortlistApplicant(Request $request){
+        //dd($request->get('id'));
+        $application = Application::where('user_id', $request->get('id'))
+            ->where('hire_requisition_job_id', $request->get('hr_hire_requisitions_job_id'))->first();
+
+        $application->update([
+            'status' => $request->get('status')
+        ]);
+        return response()->json(['data' => "Successful"], 200);
     }
 
 }
