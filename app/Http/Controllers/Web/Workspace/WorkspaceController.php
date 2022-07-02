@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web\Workspace;
 
 use App\Http\Controllers\Controller;
+use App\Models\Applicant\Applicant;
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\Location;
 
@@ -18,7 +19,8 @@ class WorkspaceController extends Controller
 
     public function __invoke(Request $request)
     {
-
-        return view('workspace.index');
+        $applicant = Applicant::where('user_id', access()->id())->first();
+        return view('workspace.index')
+            ->with('applicant', $applicant);
     }
 }

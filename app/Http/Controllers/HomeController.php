@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Applicant\Applicant;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('workspace.index');
+        $applicant = Applicant::where('user_id', access()->id())->first();
+        return view('workspace.index')
+            ->with('applicant', $applicant);
     }
 }

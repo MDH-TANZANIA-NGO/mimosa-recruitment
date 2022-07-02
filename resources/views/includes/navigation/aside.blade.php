@@ -27,7 +27,7 @@
         </li>
 
         <li>
-            <a class="side-menu__item" href="{{ route('experience.index') }}"><i class="side-menu__icon fa fa-user-secret"></i><span class="side-menu__label">Experience</span></a>
+            <a class="side-menu__item" href="{{ route('experience.index') }}"><i class="side-menu__icon mdi mdi-account-network"></i><span class="side-menu__label">Experience</span></a>
         </li>
 
         <li>
@@ -39,11 +39,11 @@
         </li>
 
         <li>
-            <a class="side-menu__item" href="{{ route('application.index') }}"><i class="side-menu__icon fa fa-search"></i><span class="side-menu__label">My Applications</span></a>
+            <a class="side-menu__item" href="{{ route('application.index') }}"><i class="side-menu__icon fa fa-bar-chart-o"></i><span class="side-menu__label">My Applications</span></a>
         </li>
 
         <li>
-            <a class="side-menu__item" href="{{ route('applicant.preview') }}"><i class="side-menu__icon fa fa-search"></i><span class="side-menu__label">Preview Profile</span></a>
+            <a class="side-menu__item" href="{{ route('applicant.preview') }}"><i class="side-menu__icon fa fa-eye"></i><span class="side-menu__label">Preview Profile</span></a>
         </li>
     </ul>
 </aside>
