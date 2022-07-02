@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\EducationResource;
 use App\Http\Resources\UserDetailResource;
 use App\Http\Resources\UserResource;
+use App\Models\Address\Address;
 use App\Models\Applicant\Applicant;
 use App\Models\Auth\User;
+use App\Models\Reference\Reference;
 use App\Models\System\Country;
 use Illuminate\Http\Request;
 
@@ -106,13 +108,17 @@ class ApplicantController extends Controller
     public function preview(){
         $applicant =   new UserDetailResource(access()->user());
         //return $applicant;
+        $addresses = Address::where('user_id', access()->id())->with('code')->get();
+        //dd($addresses);
+        $referees = Reference::where('user_id', access()->id())->get();
+        //return $applicant;
         return view('preview.applicant_details')
             ->with('applicant', $applicant)
             ->with('personal_info', $applicant->applicant)
             ->with('educations', $applicant->educations)
-            ->with('addresses', $applicant->addresses)
+            ->with('addresses', $addresses)
             ->with('experiences', $applicant->experiences)
-            ->with('skills', $applicant->skills);
-            //->with('referees', $applicant->referees);
+            ->with('skills', $applicant->skills)
+            ->with('referees', $referees);
     }
 }

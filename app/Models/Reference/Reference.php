@@ -26,8 +26,8 @@ class Reference extends BaseModel
         return $this->belongsTo(CodeValue::class,'gender_cv_id');
     }
     //type
-    public function type()
+    public function getType()
     {
-        return $this->belongsTo(CodeValue::class,'reference_type_cv_id');
+        return CodeValue::where('id', $this->reference_type_cv_id)->first()->name;
     }
 }

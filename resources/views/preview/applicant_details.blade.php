@@ -29,10 +29,10 @@
                                     <tr style="font-weight: bolder;">
                                         <th>#</th>
                                         <th>INSTITUTE/SCHOOL/UNIVERSITY</th>
+                                        <th>LEVEL</th>
                                         <th>AWARD RECEIVED</th>
                                         <th>START YEAR</th>
                                         <th>END YEAR</th>
-                                        <th>STUDYING STATUS</th>
                                         <th>CERTIFICATE</th>
                                     </tr>
                                     </thead>
@@ -41,10 +41,10 @@
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $education->institution_name }}</td>
+                                            <td>{{ $education->getLevel() }}</td>
                                             <td style="width: 10%;">{{ $education->award_received }}</td>
                                             <td style="width: 10%;">{{ $education->start_year }}</td>
                                             <td>{{ $education->end_year }}</td>
-                                            <td>{{ $education->still_studying ? 'Completed' : 'still studying' }}</td>
                                             <td><a href="{{ $education->getFirstMediaUrl('certificates')}}">View</a></td>
                                         </tr>
                                     @endforeach
@@ -68,10 +68,9 @@
                                     </thead>
                                     <tbody>
                                     @foreach($addresses AS $key => $address)
-                                        {{$address[$key]}}
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td>{{ $address->address_type }}</td>
+                                            <td>{{ $address->getType() }}</td>
                                             <td>{{ $address->area_name }}</td>
                                             <td>{{ $address->house_number }}</td>
                                             <td>{{ $address->district->name }}</td>
@@ -136,10 +135,48 @@
                                     @foreach($skills AS $key => $skill)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td>{{ $skill->category }}</td>
+                                            <td>{{ $skill->getCategory() }}</td>
                                             <td>{{ $skill->skill->name }}</td>
-                                            <td>{{ $skill->level }}</td>
+                                            <td>{{ $skill->getLevel() }}</td>
                                             <td>{{ $skill->remarks }}</td>
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>REFEREES: </strong></td>
+                            <td>
+                                <table style="width:100%" class="table table-striped table-bordered">
+                                    <thead>
+                                    <tr style="font-weight: bolder;">
+                                        <th>#</th>
+                                        <th>NAME</th>
+                                        <th>GENDER</th>
+                                        <th>ORGANISATION</th>
+                                        <th>POSITION</th>
+                                        <th>EMAIL</th>
+                                        <th>ADDRESS</th>
+                                        <th>TYPE</th>
+                                        <th>REGION</th>
+                                        <th>COUNTRY</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach($referees AS $key => $referee)
+                                        <tr>
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $referee->name }}</td>
+                                            <td>{{ $referee->gender->name }}</td>
+                                            <td>{{ $referee->organisation_name }}</td>
+                                            <td>{{ $referee->position }}</td>
+                                            <td>{{ $referee->email }}</td>
+                                            <td>{{ $referee->address }}</td>
+                                            <td>{{ $referee->getType() }}</td>
+                                            <td>{{ $referee->region->name }}</td>
+                                            <td>{{ $referee->country->name }}</td>
                                         </tr>
                                     @endforeach
                                     </tbody>

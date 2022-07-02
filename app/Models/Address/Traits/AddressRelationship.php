@@ -19,4 +19,8 @@ trait AddressRelationship
         return $this->belongsTo(CodeValue::class,'address_type_cv_id','id');
     }
 
+    public function code(){
+        return $this->belongsTo(CodeValue::class);
+    }
+
 }

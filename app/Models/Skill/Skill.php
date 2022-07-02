@@ -11,4 +11,5 @@ class Skill extends Model
     {
         return $this->belongsTo(SkillCategory::class);
     }
+
 }
