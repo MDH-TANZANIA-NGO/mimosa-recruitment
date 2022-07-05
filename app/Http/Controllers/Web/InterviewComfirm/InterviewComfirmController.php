@@ -10,8 +10,7 @@ class InterviewComfirmController extends Controller
 {
     public function index()
     {
-        $applicant = Applicant::where('user_id', access()->id())->first();
-        return view('interviewcomfirm.comfirm')
-            ->with('applicant', $applicant);
+
+        return view('interviewcomfirm.comfirm');
     }
 }
