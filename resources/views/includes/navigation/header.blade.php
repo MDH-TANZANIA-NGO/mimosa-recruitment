@@ -41,7 +41,7 @@
                                 @endif
                             @else
 
-                                <a href="#" class="dropdown-item text-center user pb-0">{{ $applicant->first_name.' '.$applicant->last_name  }}</a>
+                                <a href="#" class="dropdown-item text-center user pb-0">{{ $applicant ?? ''->first_name.' '.$applicant ?? ''->last_name  }}</a>
                                 <span class="text-center user-semi-title text-dark">{{ \Illuminate\Support\Facades\Auth::user()->email }}</span>
                                 <div class="dropdown-divider"></div>
 
