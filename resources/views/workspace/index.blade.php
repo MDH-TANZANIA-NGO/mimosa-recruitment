@@ -16,7 +16,11 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-8">
-                        <span class=" mb-1">Hi {{ $applicant->first_name.' '.$applicant->last_name }}, Welcome to MDH Recruitment Portal</span>
+                        @if(!is_null($applicant))
+                            <span class=" mb-1">Hi {{ $applicant->first_name.' '.$applicant->last_name }}, Welcome to MDH Recruitment Portal</span>
+                        @else
+                        <span class=" mb-1">Hi {{ \Illuminate\Support\Facades\Auth::user()->email }}, Welcome to MDH Recruitment Portal</span>
+                        @endif
                         <hr>
 {{--                        <h3 class="mb-3">About MDH</h3>--}}
                         <p class="mb-0 fs-12">
