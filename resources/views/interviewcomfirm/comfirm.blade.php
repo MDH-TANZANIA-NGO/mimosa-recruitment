@@ -18,10 +18,10 @@
                     <table class="table row table-borderless w-100 m-0 ">
                         <tbody class="col-lg-6 p-0">
                         <tr>
-                            <td><strong>Full Name :</strong> xxxx </td>
+                            <td><strong>Full Name:</strong> xxxx </td>
                         </tr>
                         <tr>
-                            <td><strong>Interview Position :</strong> xxxx</td>
+                            <td><strong>Interview Position:</strong> xxxx</td>
                         </tr>
                         <tr>
                             <td><strong>Interview Date and Time:</strong> DD-MM-YYYY HH:MM:s </td>
@@ -29,13 +29,13 @@
                         </tbody>
                         <tbody class="col-lg-6 p-0">
                         <tr>
-                            <td><strong>Interview Type :</strong> xxxx</td>
+                            <td><strong>Interview Type:</strong> xxxx</td>
                         </tr>
                         <tr>
                             <td><strong>Take place at:</strong> xxxx</td>
                         </tr>
                         <tr>
-                            <td><strong>What to Bring :</strong> xxxx </td>
+                            <td><strong>What to Bring:</strong> xxxx </td>
                         </tr>
                         </tbody>
                     </table>
