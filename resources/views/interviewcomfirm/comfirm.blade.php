@@ -24,7 +24,7 @@
                             <td><strong>Interview Position :</strong> xxxx</td>
                         </tr>
                         <tr>
-                            <td><strong>Interview Date :</strong> DD-MM-YYYY HH:MM:s </td>
+                            <td><strong>Interview Date and Time:</strong> DD-MM-YYYY HH:MM:s </td>
                         </tr>
                         </tbody>
                         <tbody class="col-lg-6 p-0">
