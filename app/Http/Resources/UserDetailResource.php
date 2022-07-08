@@ -25,6 +25,7 @@ class UserDetailResource extends JsonResource
             'addresses' => AddressResource::collection($this->addresses),
             'experiences' => ExperienceResource::collection($this->experiences),
             'referees' => ReferenceResource::collection($this->references),
+            'other_information' => OtherDetailsResource::collection($this->resource->other),
             'skills' => UserSkillResource::collection($this->skills)
         ];
     }

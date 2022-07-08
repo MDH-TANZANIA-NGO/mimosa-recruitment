@@ -34,7 +34,7 @@
                     </div>
                     <div class="col-md-4 mt-4 mt-sm-0">
                         <div class="chart-circle overflow-hiddene  mt-sm-0 mb-0 text-left" data-value="0.75" data-thickness="8" data-color="#2d66f7"><canvas width="256" height="256" style="height: 128px; width: 128px;"></canvas>
-                            <div class="chart-circle-value text-center "><h1 class="mb-0">75%</h1><small>Your Account Details</small></div>
+                            <div class="chart-circle-value text-center "><h1 class="mb-0">{{ceil($percentage)}}%</h1><small>Your Account Details</small></div>
                         </div>
                     </div>
                 </div>

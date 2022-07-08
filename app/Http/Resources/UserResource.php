@@ -35,6 +35,7 @@ class UserResource extends JsonResource
             'experiences' => ExperienceResource::collection($this->resource->experiences),
             'referees' => ReferenceResource::collection($this->resource->references),
             'skills' => UserSkillResource::collection($this->resource->skills),
+            'other_information' => OtherDetailsResource::collection($this->resource->other),
             'applications' => new ApplicationResource(
                 Application::where('user_id', $this->resource->id)
                         ->where('hire_requisition_job_id', $this->hire_requisition_job_id)->first()

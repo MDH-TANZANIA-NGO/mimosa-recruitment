@@ -9,6 +9,7 @@ use App\Models\Auth\Role;
 use App\Models\Auth\Permission;
 use App\Models\Education\Education;
 use App\Models\Experience\Experience;
+use App\Models\Other\Other;
 use App\Models\Project\Project;
 use App\Models\Project\SubProgram;
 use App\Models\Reference\Reference;
@@ -86,6 +87,10 @@ trait UserRelationship
 
     public function skills(){
         return $this->hasMany(UserSkill::class);
+    }
+
+    public function other(){
+        return $this->hasMany(Other::class);
     }
 
     public function applications(){
