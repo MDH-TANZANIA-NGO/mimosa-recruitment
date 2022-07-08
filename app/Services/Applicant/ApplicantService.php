@@ -9,7 +9,6 @@ use App\Models\Other\Other;
 use App\Models\Reference\Reference;
 use App\Models\Skill\UserSkill;
 use Carbon\Carbon;
-use Carbon\CarbonInterval;
 
 trait ApplicantService
 {
@@ -34,7 +33,7 @@ trait ApplicantService
      * @param $user_id
      * @return array|float|int
      */
-    public function experience($user_id){
+    public function experience($required, $user_id){
         $experiences = Experience::where('user_id', $user_id)->get();
         $diff = [];
         foreach ($experiences as $experience){
@@ -42,7 +41,26 @@ trait ApplicantService
             $end = !empty($experience->end_year) ? Carbon::parse($experience->end_year) : Carbon::parse(Carbon::now());
             array_push($diff, $end->diffInDays($start));
         }
-        //return Carbon::now()->subDays(array_sum($diff))->diffForHumans();
-        return CarbonInterval::days(array_sum($diff))->cascade()->forHumans();
+        $experience_mismatch = NULL;
+        //return CarbonInterval::days(array_sum($diff))->cascade()->forHumans();
+        if (array_sum($diff) > $required * 365){
+            $experience_mismatch = true;
+        }
+        return $experience_mismatch;
+    }
+
+    /**
+     * To check if the user has the minimum education requirements for that vacancy
+     * @param $required
+     * @param $user_id
+     * @return bool
+     */
+    public function minimum_education($required, $user_id){
+        $highest =  Education::where('user_id', $user_id)->max('education_level_cv_id');
+        $education_mismatch = NULL;
+        if ($highest < $required){
+            $education_mismatch = true;
+        }
+        return $education_mismatch;
     }
 }

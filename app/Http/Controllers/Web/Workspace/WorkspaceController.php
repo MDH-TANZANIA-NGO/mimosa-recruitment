@@ -30,7 +30,6 @@ class WorkspaceController extends Controller
     public function __invoke(Request $request)
     {
         $percentage = $this->percentage(access()->id());
-        dd($this->experience(access()->id()));
         $applicant = Applicant::where('user_id', access()->id())->first();
         return view('workspace.index')
             ->with('percentage', $percentage)
