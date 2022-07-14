@@ -28,5 +28,11 @@ class VacancyController extends Controller
             ->with('_advertisement', $result);
     }
 
+    public function save(){
+        $response = Http::get(config('mdh.mimosa_url').'advertisement');
+        $result = json_decode($response);
+        dd($result);
+    }
+
 
 }

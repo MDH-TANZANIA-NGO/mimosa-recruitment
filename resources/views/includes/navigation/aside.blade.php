@@ -31,7 +31,7 @@
         </li>
 
         <li>
-            <a class="side-menu__item" href="{{ route('reference.index') }}"><i class="side-menu__icon fa fa-user-secret"></i><span class="side-menu__label">Reference</span></a>
+            <a class="side-menu__item" href="{{ route('reference.index') }}"><i class="side-menu__icon fa fa-user-secret"></i><span class="side-menu__label">Referees</span></a>
         </li>
 
         <li>

@@ -7,5 +7,6 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['web', 'auth'], 'prefix' 
     Route::post('store', 'AdminController@store')->name('store');
     Route::put('{applicant}/update', 'AdminController@update')->name('update');
     Route::get('preview', 'AdminController@preview')->name('preview');
+    Route::get('saveJobs', 'AdminController@save')->name('save');
 
 });
