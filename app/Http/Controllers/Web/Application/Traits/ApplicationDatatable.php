@@ -19,7 +19,8 @@ trait ApplicationDatatable
                 return Carbon::create($query->created_at)->format('Y-m-d');
             })
             ->editColumn('adv_uuid', function($query){
-                $response = Http::get('http://mdherp.test/api/advertisement/'.$query->adv_uuid.'/show');
+                $response = Http::get(config('mdh.mimosa_url').'advertisement'.$query->adv_uuid.'/show');
+                //$response = Http::get(config('mdh.mimosa_url').'advertisement');
                 return json_decode($response)->result->advertisement->title;
             })
             ->make(true);
