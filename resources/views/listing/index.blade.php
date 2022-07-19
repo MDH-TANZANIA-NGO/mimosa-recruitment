@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('admin.datatable.index')
+    @include('listing.datatable.index')
 @endsection
