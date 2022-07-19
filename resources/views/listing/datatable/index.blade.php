@@ -16,6 +16,7 @@
                         <th class="wd-15p">CONTRACT TYPE</th>
                         <th class="wd-25p">EMPLOYEES REQUIRED</th>
                         <th class="wd-25p">EDUCATION LEVEL</th>
+                        <th class="wd-25p">ACTION</th>
                     </tr>
                     </thead>
                 </table>
@@ -41,6 +42,7 @@
                     { data: 'contract_type', name: 'contract_type', searchable: true},
                     { data: 'empoyees_required', name: 'empoyees_required', searchable: true },
                     { data: 'education_level', name: 'education_level', searchable: false },
+                    { data: 'action', name: 'action', searchable: false },
                 ]
             });
 
