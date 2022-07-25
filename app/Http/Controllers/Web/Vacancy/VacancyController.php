@@ -19,13 +19,19 @@ class VacancyController extends Controller
 
     public function show($uuid){
         $response = Http::get(config('mdh.mimosa_url').'advertisement/'.$uuid.'/show');
-        $result = json_decode($response)->result->advertisement;
+        $result = json_decode($response)->result->advertisements;
         $application_status = Application::where('user_id', access()->id())
                                             ->where('adv_uuid', $uuid)->first();
         return view('vacancy.show')
             ->with('application_status', $application_status)
             ->with('documents', code_value()->query()->where('code_id',10)->get())
             ->with('_advertisement', $result);
+    }
+
+    public function save(){
+        $response = Http::get(config('mdh.mimosa_url').'advertisement');
+        $result = json_decode($response);
+        dd($result);
     }
 
 

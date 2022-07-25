@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\Applicant;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\UserApplicantResource;
 use App\Http\Resources\UserResource;
 use App\Models\Application\Application;
 use App\Models\Auth\User;
@@ -38,6 +39,10 @@ class ApplicantController extends Controller
 
     public function resource($id, $hire){
         return new UserResource(User::find($id),$hire);
+    }
+
+    public function applicant($id){
+        return new UserApplicantResource(User::find($id));
     }
 
     public function shortlistApplicant(Request $request){

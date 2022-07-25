@@ -3,7 +3,7 @@
     <ul class="side-menu">
 
         <li>
-            <a class="side-menu__item" href="{{ url('/home') }}"><i class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Home</span></a>
+            <a class="side-menu__item" href="{{ route('workspace.invoke') }}"><i class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Home</span></a>
         </li>
 
         <li>
@@ -31,7 +31,7 @@
         </li>
 
         <li>
-            <a class="side-menu__item" href="{{ route('reference.index') }}"><i class="side-menu__icon fa fa-user-secret"></i><span class="side-menu__label">Reference</span></a>
+            <a class="side-menu__item" href="{{ route('reference.index') }}"><i class="side-menu__icon fa fa-user-secret"></i><span class="side-menu__label">Referees</span></a>
         </li>
 
         <li>

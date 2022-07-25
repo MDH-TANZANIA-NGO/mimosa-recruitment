@@ -16,9 +16,9 @@ class DatabaseSeeder extends Seeder
         //$this->call(UsersTableSeeder::class);
         $this->call(CodesTableSeeder::class);
         $this->call(CodeValuesTableSeeder::class);
-        //$this->call(CountryTableSeeder::class);
-        //$this->call(RegionsTableSeeder::class);
-        //$this->call(DistrictsTableSeeder::class);
+        $this->call(CountryTableSeeder::class);
+        $this->call(RegionsTableSeeder::class);
+        $this->call(DistrictsTableSeeder::class);
 
         DB::commit();
     }
