@@ -45,23 +45,25 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        {!! Form::label('current_salary', __("Current Salary"),['class'=>'form-label','required_asterik']) !!}
-                        {!! Form::text('current_salary',old('current_salary'),['class' => 'form-control', 'placeholder' => 'Please Enter your current salary']) !!}
+                        {!! Form::label('current_salary', __("Expected Salary"),['class'=>'form-label','required_asterik']) !!}
+                        {!! Form::text('current_salary',old('current_salary'),['class' => 'form-control', 'placeholder' => 'Please Enter your expected salary']) !!}
                         {!! $errors->first('current_salary', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="form-group">
-                        {!! Form::label('current_benefits', __("Current Benefits"),['class'=>'form-label','required_asterik']) !!}
-                        {!! Form::textArea('current_benefits',old('current_benefits'),['class' => 'form-control', 'rows' => 3, 'placeholder' => 'Please Enter your current salary']) !!}
-                        {!! $errors->first('current_benefits', '<span class="badge badge-danger">:message</span>') !!}
+                        {!! Form::label('availability', __("Availability in Days"),['class'=>'form-label','required_asterik']) !!}
+                        {!! Form::text('availability',old('availability'),['class' => 'form-control', 'placeholder' => 'Availability in Days']) !!}
+                        {!! $errors->first('availability', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
                 </div>
+
+
             </div>
             &nbsp;
             <div class="row">
-                <div class="col-md-4">
+                {{--<div class="col-md-4">
                     <div class="form-group">
                         <label class="custom-switch">
                             <input type="checkbox" name="relocation" class="custom-switch-input">
@@ -79,15 +81,15 @@
                             <span class="custom-switch-description">Willing to travel</span>
                         </label>
                     </div>
-                </div>
-
-                <div class="col-md-4">
+                </div>--}}
+                <div class="col-md-12">
                     <div class="form-group">
-                        {!! Form::label('availability', __("Availability in Days"),['class'=>'form-label','required_asterik']) !!}
-                        {!! Form::text('availability',old('availability'),['class' => 'form-control', 'placeholder' => 'Availability in Days']) !!}
-                        {!! $errors->first('availability', '<span class="badge badge-danger">:message</span>') !!}
+                        {!! Form::label('current_benefits', __("Current Benefits"),['class'=>'form-label','required_asterik']) !!}
+                        {!! Form::textArea('current_benefits',old('current_benefits'),['class' => 'form-control', 'rows' => 3, 'placeholder' => 'Please Enter your current benefits']) !!}
+                        {!! $errors->first('current_benefits', '<span class="badge badge-danger">:message</span>') !!}
                     </div>
                 </div>
+
             </div>
             &nbsp
             <div class="row">
