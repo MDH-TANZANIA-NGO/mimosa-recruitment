@@ -15,8 +15,8 @@
                         <th class="wd-15p">Address Type</th>
                         <th class="wd-15p">Region</th>
                         <th class="wd-20p">District</th>
-                        <th class="wd-20p">Area</th>
-                        <th class="wd-20p">House Number</th>
+                        <th class="wd-20p">Street</th>
+{{--                        <th class="wd-20p">House Number</th>--}}
                         <th class="wd-20p">Action</th>
                     </tr>
                     </thead>

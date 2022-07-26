@@ -23,7 +23,7 @@
                         {data: 'region', name: 'region', searchable: true},
                         {data: 'district', name: 'district', searchable: true},
                         {data: 'area_name', name: 'area_name', searchable: true},
-                        {data: 'house_number', name: 'house_number', searchable: true},
+                        // {data: 'house_number', name: 'house_number', searchable: true},
                         {data: 'action', name: 'action', orderable: true, searchable: true},
                     ]
                 });

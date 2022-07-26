@@ -32,7 +32,7 @@
 
                 <div class="col-sm-6 col-md-4">
                     <div class="form-group">
-                        <label class="form-label">Area Name</label>
+                        <label class="form-label">Street Name</label>
                         <input type="text" class="form-control" name="area_name"  required>
                         @error('area_name')
                         <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong> </span>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-4">
+                {{--<div class="col-sm-6 col-md-4">
                     <div class="form-group">
                         <label class="form-label">House Number</label>
                         <input type="text" class="form-control" name="house_number"  required>
@@ -48,7 +48,7 @@
                         <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong> </span>
                         @enderror
                     </div>
-                </div>
+                </div>--}}
             </div>
             &nbsp
 
